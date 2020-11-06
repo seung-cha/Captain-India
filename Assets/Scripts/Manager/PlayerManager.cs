@@ -52,7 +52,11 @@ public class PlayerManager : MonoBehaviour
         maxWallJumpCount = SetWallJumpCount;
 
         playerCamera = GetComponent<CinemachineVirtualCamera>();
-       cameraTransposer = playerCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
+       cameraTransposer = playerCamera.GetCinemachineComponent<CinemachineFramingTransposer>();       
+    }
+
+    public void LookForThePlayer()
+    {
         playerCamera.m_Follow = GameObject.FindGameObjectWithTag("Player").transform;
     }
 }

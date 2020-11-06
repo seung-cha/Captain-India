@@ -16,22 +16,22 @@ MonoBehaviour:
   - image: {fileID: 2800000, guid: 6edad88eff2e347479baf51ec81d231c, type: 3}
     speaker: Captain India
     text: I'm Captain India.
-  - image: {fileID: 0}
+  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
     speaker: ???
     text: Oh no!!
   - image: {fileID: 2800000, guid: 6edad88eff2e347479baf51ec81d231c, type: 3}
-    speaker: Captain india
+    speaker: Captain India
     text: What...
-  - image: {fileID: 0}
+  - image: {fileID: 2800000, guid: 9a0a381f4ba4d6a4698a5942f03c4220, type: 3}
     speaker: ???
     text: Help me!!
-  - image: {fileID: 0}
-    speaker: Someone
+  - image: {fileID: 2800000, guid: 9a0a381f4ba4d6a4698a5942f03c4220, type: 3}
+    speaker: James
     text: Somebody help me!!!!
   - image: {fileID: 2800000, guid: 6edad88eff2e347479baf51ec81d231c, type: 3}
     speaker: Captain India
-    text: Damn...
+    text: Yikes...
   - image: {fileID: 2800000, guid: 6edad88eff2e347479baf51ec81d231c, type: 3}
     speaker: Captain India
-    text: I'm just gonna pretend I saw nothing
+    text: I think I gotta help him now.
   value: 00000000010000000000000001000000010000000000000000000000

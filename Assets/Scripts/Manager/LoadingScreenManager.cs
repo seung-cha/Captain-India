@@ -10,7 +10,8 @@ public class LoadingScreenManager : MonoBehaviour
     private List<LoadingScreenInfo> loadingInfos;
 
     public int sceneIndex;
-    public LoadingScreenInfo currentInfo;
+    public LoadingScreenInfo currentInfo
+    { get; private set; }
     private int index;
 
 

@@ -21,6 +21,9 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 wallBoxSize;
     // Wall
 
+
+    [SerializeField]
+    bool showGizmo;
     // Cam
     private void Awake()
     {
@@ -31,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         wallPos = new Vector2[2];
         PlayerManager.Manager.gravity = ridBody.gravityScale;
+        PlayerManager.Manager.LookForThePlayer();
     }
 
     // Update is called once per frame
@@ -88,14 +92,7 @@ public class PlayerMovement : MonoBehaviour
         bool rightWall = Physics2D.OverlapBox(wallPos[1], wallBoxSize, 0, wallLayer);
 
 
-        if (leftWall || rightWall)
-        {
-           PlayerManager.Manager.isAgainstWall = true; 
-        }
-        else
-        {
-            PlayerManager.Manager.isAgainstWall = false;
-        }
+        PlayerManager.Manager.isAgainstWall = (leftWall || rightWall) ? true : false;
     }
 
     void GetInput()
@@ -104,24 +101,33 @@ public class PlayerMovement : MonoBehaviour
         {
             PlayerManager.Manager.cameraTransposer.m_ScreenX = 0.5f;
             moveValue = 0;
+            PlayerAnimationManager.Manager.currentState = PlayerAnimationManager.State.Idle;
             return;
         }
 
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
+            // Moving Left
             PlayerManager.Manager.cameraTransposer.m_ScreenX = 0.6f;
             moveValue = -1;
+            PlayerAnimationManager.Manager.currentState = PlayerAnimationManager.State.running;
+            this.gameObject.transform.localScale = new Vector3(-Mathf.Abs(this.gameObject.transform.localScale.x), this.gameObject.transform.localScale.y, this.gameObject.transform.localScale.z);
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
+            // Moving Right
             PlayerManager.Manager.cameraTransposer.m_ScreenX = 0.4f;
             moveValue = 1;
+            PlayerAnimationManager.Manager.currentState = PlayerAnimationManager.State.running;
+            this.gameObject.transform.localScale = new Vector3(Mathf.Abs(this.gameObject.transform.localScale.x), this.gameObject.transform.localScale.y, this.gameObject.transform.localScale.z);
         }
         else
         {
+            // Idle
             PlayerManager.Manager.cameraTransposer.m_ScreenX = 0.5f;
             moveValue = 0;
+            PlayerAnimationManager.Manager.currentState = PlayerAnimationManager.State.Idle;
         }
 
         // Jump system
@@ -145,14 +151,19 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        // Attack
 
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            PlayerAnimationManager.Manager.currentCombatState = PlayerAnimationManager.Combat.attack;
+        }
 
 
 
     }
 
 
-
+    
 
 
     void ApplyPlayerInfo()
@@ -167,17 +178,16 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
+        if (!showGizmo)
+        { return; }
         Gizmos.DrawCube(pos, boxSize);
 
-
-        /*
         Gizmos.color = Color.red;
 
         Gizmos.DrawCube(wallPos[0], wallBoxSize);
         Gizmos.DrawCube(wallPos[1], wallBoxSize);
-        */
     }
 
 }

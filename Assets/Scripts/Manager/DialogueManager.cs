@@ -34,7 +34,7 @@ public class DialogueManager : MonoBehaviour
     string currentText;
     Queue<int> dialogueValue;
 
-   public int timeLineIndex;
+    public int timeLineIndex;
     private void Awake()
     {
         if (Manager == null)
@@ -56,7 +56,10 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-
+    private void Update()
+    {
+        CheckCurrentClip();
+    }
 
     public void EnqueueDialogue(Speech speech)
     {
@@ -69,7 +72,7 @@ public class DialogueManager : MonoBehaviour
         foreach (int value in speech.value)
             dialogueValue.Enqueue(value);
 
-      SetDialogue();
+        SetDialogue();
 
 
     }
@@ -88,7 +91,7 @@ public class DialogueManager : MonoBehaviour
 
     public void SetDialogue()
     {
-        
+
 
         stopCoroutine = false;
         /*
@@ -118,14 +121,14 @@ public class DialogueManager : MonoBehaviour
 
         StartCoroutine(AnimateDialogue(temp.text));
 
-        for(int i = 0; i < images.Length; i++)
+        for (int i = 0; i < images.Length; i++)
         {
             images[i].texture = temp.image;
             names[i].text = temp.speaker;
         }
 
-     
-   
+
+
         if (dialogueValue.Peek() == 0)
         {
             // leftSide;
@@ -139,16 +142,16 @@ public class DialogueManager : MonoBehaviour
             dialogueText.alignment = TextAlignmentOptions.TopRight;
             speakerBody[1].SetActive(true);
             speakerBody[0].SetActive(false);
-        }      
+        }
         dialogueValue.Dequeue();
     }
 
     private IEnumerator AnimateDialogue(string text)
     {
         currentText = text;
-       char[] characters = text.ToCharArray();
+        char[] characters = text.ToCharArray();
         string temp = null;
-        foreach(char chars in characters)
+        foreach (char chars in characters)
         {
 
             if (stopCoroutine)
@@ -163,28 +166,48 @@ public class DialogueManager : MonoBehaviour
 
     public void Proceed()
     {
-        
-        if(dialogueText.text != currentText)
+
+        if (dialogueText.text != currentText)
         {
-            // Stop coroutine
+            // Stop coroutine and display the whole dialogue.
             stopCoroutine = true;
             dialogueText.text = currentText;
         }
-        else if(dialogueText.text == currentText && dialogue.Count != 0)
-        {          
+        else if (dialogueText.text == currentText && dialogue.Count != 0)
+        {
             SetDialogue();
         }
         else
         {
             // Exit
             timeLineIndex = -1;
+            clips = null;
+            director = null;
             PlayerManager.Manager.canMove = true;
             dialogueBody.SetActive(false);
-           
+
         }
 
     }
 
+    void CheckCurrentClip()
+    {
+        // return if there's no reference to a Playble Director
+        if (director == null)
+        {
+            nextButton.interactable = true; 
+            return;
+        }
+        if (director.playableAsset != null)
+        {
+            nextButton.interactable = false;
 
+            // Check if the current animation has been played
+            if (director.state == PlayState.Paused)
+                nextButton.interactable = true;           
+        }
+        else
+            nextButton.interactable = true;
+    }
 
 }

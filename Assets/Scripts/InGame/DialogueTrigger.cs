@@ -18,6 +18,8 @@ public class DialogueTrigger : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.tag != "Player") { return; }
+
         if (!queued)
         {
             if (director != null && asset != null)
@@ -25,7 +27,7 @@ public class DialogueTrigger : MonoBehaviour
                 DialogueManager.Manager.clips = asset;
                 DialogueManager.Manager.director = director;
             }
-            //Debug 
+            
             DialogueManager.Manager.EnqueueDialogue(item);           
             DialogueManager.Manager.DisplayDialogue();
             queued = true;
@@ -34,6 +36,8 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.tag != "Player") { return; }
+
         DialogueManager.Manager.HideDialogue();
         PlayerManager.Manager.canMove = true;
     }
