@@ -40,5 +40,6 @@ public class DialogueTrigger : MonoBehaviour
 
         DialogueManager.Manager.HideDialogue();
         PlayerManager.Manager.canMove = true;
+        PlayerManager.Manager.onDialogue = false;
     }
 }

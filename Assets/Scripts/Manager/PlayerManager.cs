@@ -17,6 +17,11 @@ public class PlayerManager : MonoBehaviour
     public bool isGrounded;
     public bool isAgainstWall;
     public bool canMove;
+    public bool onDialogue;
+
+    public bool isStaggered;
+    public float staggerDuration;
+    public Vector2 staggerDirection;
 
 
     public int maxJumpCount

@@ -101,7 +101,7 @@ public class DialogueManager : MonoBehaviour
         */
 
         PlayerManager.Manager.canMove = false;
-
+        PlayerManager.Manager.onDialogue = true;
         timeLineIndex++;
 
         if (clips.Count > timeLineIndex && timeLineIndex >= 0)
@@ -184,6 +184,7 @@ public class DialogueManager : MonoBehaviour
             clips = null;
             director = null;
             PlayerManager.Manager.canMove = true;
+            PlayerManager.Manager.onDialogue = false;
             dialogueBody.SetActive(false);
 
         }

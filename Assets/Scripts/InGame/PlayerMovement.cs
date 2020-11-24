@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     // Wall
 
 
+    bool isFacingRight;
+
     [SerializeField]
     bool showGizmo;
     // Cam
@@ -32,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Start()
     {
+        isFacingRight = true;
         wallPos = new Vector2[2];
         PlayerManager.Manager.gravity = ridBody.gravityScale;
         PlayerManager.Manager.LookForThePlayer();
@@ -54,6 +57,12 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
+        StaggerPlayer();
+    }
+
+    private void LateUpdate()
+    {
+        PushBackPlayer();
     }
 
 
@@ -69,6 +78,16 @@ public class PlayerMovement : MonoBehaviour
         }
         else
             ridBody.gravityScale = 0;
+
+    }
+
+    void StaggerPlayer()
+    {
+        if(PlayerManager.Manager.isStaggered)
+        {
+
+            ridBody.velocity = PlayerManager.Manager.staggerDirection * PlayerManager.Manager.speed;
+        }
 
     }
     void Jump()
@@ -95,9 +114,24 @@ public class PlayerMovement : MonoBehaviour
         PlayerManager.Manager.isAgainstWall = (leftWall || rightWall) ? true : false;
     }
 
+    void PushBackPlayer()
+    {
+        if(PlayerManager.Manager.isStaggered)
+        {
+            PlayerManager.Manager.staggerDuration -= 1 * Time.deltaTime;
+        }
+
+        if (PlayerManager.Manager.staggerDuration <= 0)
+        {
+            PlayerManager.Manager.staggerDuration = 0;
+            PlayerManager.Manager.isStaggered = false;
+        }
+
+    }
+
     void GetInput()
     {
-        if (!PlayerManager.Manager.canMove)
+        if (!PlayerManager.Manager.canMove || PlayerManager.Manager.isStaggered)
         {
             PlayerManager.Manager.cameraTransposer.m_ScreenX = 0.5f;
             moveValue = 0;
@@ -106,21 +140,23 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetButton("Left"))
         {
             // Moving Left
             PlayerManager.Manager.cameraTransposer.m_ScreenX = 0.6f;
             moveValue = -1;
             PlayerAnimationManager.Manager.currentState = PlayerAnimationManager.State.running;
             this.gameObject.transform.localScale = new Vector3(-Mathf.Abs(this.gameObject.transform.localScale.x), this.gameObject.transform.localScale.y, this.gameObject.transform.localScale.z);
+            isFacingRight = false;
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetButton("Right"))
         {
             // Moving Right
             PlayerManager.Manager.cameraTransposer.m_ScreenX = 0.4f;
             moveValue = 1;
             PlayerAnimationManager.Manager.currentState = PlayerAnimationManager.State.running;
             this.gameObject.transform.localScale = new Vector3(Mathf.Abs(this.gameObject.transform.localScale.x), this.gameObject.transform.localScale.y, this.gameObject.transform.localScale.z);
+            isFacingRight = true;
         }
         else
         {
@@ -131,7 +167,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Jump system
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Jump"))
         {
             if (PlayerManager.Manager.canJump)
             {
@@ -153,7 +189,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Attack
 
-        if(Input.GetKeyDown(KeyCode.Z))
+        if(Input.GetButton("Attack1"))
         {
             PlayerAnimationManager.Manager.currentCombatState = PlayerAnimationManager.Combat.attack;
         }
@@ -190,4 +226,13 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawCube(wallPos[1], wallBoxSize);
     }
 
+
+    public void EnablePlayerMove()
+    {
+        PlayerManager.Manager.canMove = true;
+    }
+    public void DisablePlayerMove()
+    {
+        PlayerManager.Manager.canMove = false;
+    }
 }
