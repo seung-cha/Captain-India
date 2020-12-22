@@ -23,6 +23,7 @@ public class PlayerManager : MonoBehaviour
     public float staggerDuration;
     public Vector2 staggerDirection;
 
+    public GameObject player;
 
     public int maxJumpCount
     { get; private set; }
@@ -62,6 +63,11 @@ public class PlayerManager : MonoBehaviour
 
     public void LookForThePlayer()
     {
-        playerCamera.m_Follow = GameObject.FindGameObjectWithTag("Player").transform;
+        playerCamera.m_Follow = player.transform;
+    }
+
+    public GameObject GetPlayer()
+    {
+        return player;
     }
 }

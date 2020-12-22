@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     {
         ridBody = GetComponent<Rigidbody2D>();
         boxCol = GetComponent<BoxCollider2D>();
+        PlayerManager.Manager.player = this.gameObject;
+        
     }
     void Start()
     {
@@ -107,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
         // Right
         wallPos[1] = new Vector2(boxCol.bounds.max.x, boxCol.bounds.center.y);
 
-        bool leftWall = Physics2D.OverlapBox(wallPos[0], wallBoxSize, 0, wallLayer);
+        bool leftWall =  Physics2D.OverlapBox(wallPos[0], wallBoxSize, 0, wallLayer);
         bool rightWall = Physics2D.OverlapBox(wallPos[1], wallBoxSize, 0, wallLayer);
 
 
