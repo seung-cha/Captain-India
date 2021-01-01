@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public Collider2D attackCollider;
-
+    public float Intensity;
+    public float duration;
+    public int damage;
    public void EnableCollider()
     {
         attackCollider.gameObject.SetActive(true);
@@ -19,6 +21,30 @@ public class PlayerAttack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform != this.gameObject.transform && collision.gameObject.tag == "Enemy")
-            collision.gameObject.SetActive(false);
+        {
+            AI targetAI;
+            EnemyHolder.Manager.enemyAIs.TryGetValue(collision.gameObject, out targetAI);
+
+            if (targetAI != null)
+            {
+                if (this.gameObject.transform.position.x < collision.gameObject.transform.position.x)
+                {
+                    Vector2 value = new Vector2(1, 1).normalized;
+                    Vector2 staggerDirection = new Vector2(value.x * Intensity, 1);
+                    targetAI.staggerDir = staggerDirection;
+                }
+                else
+                {
+                    Vector2 value = new Vector2(1, 1).normalized;
+                    Vector2 staggerDirection = new Vector2(value.x * -Intensity, 1);
+                    targetAI.staggerDir = staggerDirection;
+                }
+
+
+                targetAI.staggerDuration = duration;
+                targetAI.health -= damage;
+                targetAI.isStaggered = true;
+            }
+        }
     }
 }

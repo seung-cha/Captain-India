@@ -104,12 +104,15 @@ public class DialogueManager : MonoBehaviour
         PlayerManager.Manager.onDialogue = true;
         timeLineIndex++;
 
-        if (clips.Count > timeLineIndex && timeLineIndex >= 0)
+        if (clips != null && clips.Count > 0)
         {
-            if (clips.ElementAt(timeLineIndex) != null)
+            if (clips.Count > timeLineIndex && timeLineIndex >= 0)
             {
-                director.playableAsset = clips.ElementAt(timeLineIndex);
-                director.Play();
+                if (clips.ElementAt(timeLineIndex) != null)
+                {
+                    director.playableAsset = clips.ElementAt(timeLineIndex);
+                    director.Play();
+                }
             }
         }
 

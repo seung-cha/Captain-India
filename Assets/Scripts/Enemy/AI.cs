@@ -8,13 +8,13 @@ public class AI : MonoBehaviour
     public float speed;
     public float moveOffset;
     public float distance;
+    public int health;
    
    public Delay Dattack;
    public Delay Ddetection;
 
     public BoxCollider2D boxCol;
     public LayerMask playerMask;
-    public LayerMask playerAndThisObject;
     public Vector2 attackSize;
     public Vector2 attackBoxOffset;
     private Vector2[] wallPos;
@@ -34,23 +34,66 @@ public class AI : MonoBehaviour
    public Rigidbody2D rid;
     Vector2 vel;
 
-    
+    public bool isStaggered;
+    public float staggerDuration;
+    public Vector2 staggerDir;
+
+
+    public GameObject particleGameObject;
+    public float duration;
+    private float particleSpawnOffset;
+
+
+    private bool quitting = false;
     private void Awake()
     {
+       
         scale = Mathf.Abs(transform.localScale.x);
         wallPos = new Vector2[2];
         player = PlayerManager.Manager.GetPlayer();
         // Left
     }
+
+    private void OnApplicationQuit()
+    {
+        quitting = true;
+    }
+    private void OnDestroy()
+    {
+        if (!quitting)
+        {
+            GameObject particle = Instantiate(particleGameObject);
+            particle.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + particleSpawnOffset);
+            Destroy(particle, duration);
+        }
+
+        if (EnemyHolder.Manager.enemyAIs != null)
+        {
+            if (EnemyHolder.Manager.enemyAIs.ContainsKey(this.gameObject))
+            {          
+                EnemyHolder.Manager.enemyAIs.Remove(this.gameObject);
+            }
+        }  
+
+    }
     void Start()
     {
         rid = GetComponent<Rigidbody2D>();
+
+        if(EnemyHolder.Manager.enemyAIs != null)
+        EnemyHolder.Manager.enemyAIs.Add(this.gameObject, this);
+        particleSpawnOffset = boxCol.bounds.extents.y; 
     }
 
     // Update is called once per frame
     void Update()
     {
+    
         playerDistance = Vector2.Distance(this.gameObject.transform.position, player.transform.position);
+        if(health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
         Flip();
         AttackDetection();
         DetectPlayer();
@@ -72,22 +115,26 @@ public class AI : MonoBehaviour
 
     void Flip()
     {
-        if (this.gameObject.transform.position.x > PlayerManager.Manager.player.transform.position.x)
+        if (PlayerManager.Manager.player != null)
         {
-            // Captain India is on the left side
-            this.gameObject.transform.localScale = new Vector3(scale, this.gameObject.transform.localScale.y, this.gameObject.transform.localScale.z);
-            targetIsOnLeft = true;
+            if (this.gameObject.transform.position.x > PlayerManager.Manager.player.transform.position.x)
+            {
+                // Captain India is on the left side
+                this.gameObject.transform.localScale = new Vector3(scale, this.gameObject.transform.localScale.y, this.gameObject.transform.localScale.z);
+                targetIsOnLeft = true;
+            }
+            else
+            {
+                this.gameObject.transform.localScale = new Vector3(-scale, this.gameObject.transform.localScale.y, this.gameObject.transform.localScale.z);
+                targetIsOnLeft = false;
+            }
         }
-        else
-        {
-            this.gameObject.transform.localScale = new Vector3(-scale, this.gameObject.transform.localScale.y, this.gameObject.transform.localScale.z);
-            targetIsOnLeft = false;
-        }
+
     }
 
     void AttackDetection()
     {
-        if(attackForceFalse)
+        if(attackForceFalse || isStaggered)
         { Dattack.able = false; return; }
 
         wallPos[0] = new Vector2(boxCol.bounds.min.x, boxCol.bounds.center.y);
@@ -103,10 +150,14 @@ public class AI : MonoBehaviour
             {
                 if (Dattack.threshHold <= 0)
                 {
-                    Debug.Log("Detected");
-                    Dattack.able = true;
-                    Dattack.currentDelay = Dattack.delay;
-                    Dattack.threshHold = Dattack.threshHoldMax;
+
+                    if (PlayerManager.Manager.player != null)
+                    {
+                        Debug.Log("Detected");
+                        Dattack.able = true;
+                        Dattack.currentDelay = Dattack.delay;
+                        Dattack.threshHold = Dattack.threshHoldMax;
+                    }
                 }
                 else
                     Dattack.threshHold = Dattack.threshHold - 1 * Time.deltaTime;
@@ -134,7 +185,7 @@ public class AI : MonoBehaviour
            // foreach(RaycastHit2D hits in hit)
            // {
            //     Debug.Log(hits.collider.tag);
-           // }
+           // ra }
            
             if (playerDistance <= distance)
             {
@@ -156,36 +207,52 @@ public class AI : MonoBehaviour
             Ddetection.able = false;
         }
 
+        if (PlayerManager.Manager.player == null)
+            Ddetection.able = false;
+
     }
 
     void Movement()
     {
-
-        if (!detectionForceFalse)
+        if (!isStaggered)
         {
-            if (Ddetection.able == true)
+            if (!detectionForceFalse)
             {
-                if (playerDistance >= moveOffset)
+                if (Ddetection.able == true)
                 {
+                    if (playerDistance >= moveOffset)
+                    {
 
-                    if (targetIsOnLeft)
-                    {
-                        vel = new Vector2(-speed, vel.y);
+                        if (targetIsOnLeft)
+                        {
+                            vel = new Vector2(-speed, vel.y);
+                        }
+                        else if (!targetIsOnLeft)
+                        {
+                            vel = new Vector2(speed, vel.y);
+                        }
                     }
-                    else if (!targetIsOnLeft)
-                    {
-                        vel = new Vector2(speed, vel.y);
-                    }
+                    else
+                        vel = Vector2.zero;
                 }
                 else
                     vel = Vector2.zero;
             }
             else
+            {
                 vel = Vector2.zero;
+            }
         }
         else
         {
-            vel = Vector2.zero;
+            vel = staggerDir;
+            staggerDuration -= 1 * Time.deltaTime;
+
+            if (staggerDuration <= 0)
+            {
+                isStaggered = false;
+                detectionForceFalse = false;
+            }
         }
     }
 

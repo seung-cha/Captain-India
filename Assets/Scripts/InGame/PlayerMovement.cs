@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D ridBody;
     BoxCollider2D boxCol;
     int moveValue;
+   public float staminaRefillValue;
 
 
     // Ground
@@ -34,6 +35,11 @@ public class PlayerMovement : MonoBehaviour
         PlayerManager.Manager.player = this.gameObject;
         
     }
+
+    private void OnDestroy()
+    {
+        PlayerManager.Manager.player = null;
+    }
     void Start()
     {
         isFacingRight = true;
@@ -48,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         GetInput();
         CheckCondition();
         ApplyPlayerInfo();
-
+        RefillStamina();
         // temp
 
     
@@ -137,7 +143,7 @@ public class PlayerMovement : MonoBehaviour
         {
             PlayerManager.Manager.cameraTransposer.m_ScreenX = 0.5f;
             moveValue = 0;
-            PlayerAnimationManager.Manager.currentState = PlayerAnimationManager.State.Idle;
+          //  PlayerAnimationManager.Manager.currentState = PlayerAnimationManager.State.Idle;
             return;
         }
 
@@ -147,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
             // Moving Left
             PlayerManager.Manager.cameraTransposer.m_ScreenX = 0.6f;
             moveValue = -1;
-            PlayerAnimationManager.Manager.currentState = PlayerAnimationManager.State.running;
+           // PlayerAnimationManager.Manager.currentState = PlayerAnimationManager.State.running;
             this.gameObject.transform.localScale = new Vector3(-Mathf.Abs(this.gameObject.transform.localScale.x), this.gameObject.transform.localScale.y, this.gameObject.transform.localScale.z);
             isFacingRight = false;
         }
@@ -156,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
             // Moving Right
             PlayerManager.Manager.cameraTransposer.m_ScreenX = 0.4f;
             moveValue = 1;
-            PlayerAnimationManager.Manager.currentState = PlayerAnimationManager.State.running;
+          //PlayerAnimationManager.Manager.currentState = PlayerAnimationManager.State.running;
             this.gameObject.transform.localScale = new Vector3(Mathf.Abs(this.gameObject.transform.localScale.x), this.gameObject.transform.localScale.y, this.gameObject.transform.localScale.z);
             isFacingRight = true;
         }
@@ -165,7 +171,7 @@ public class PlayerMovement : MonoBehaviour
             // Idle
             PlayerManager.Manager.cameraTransposer.m_ScreenX = 0.5f;
             moveValue = 0;
-            PlayerAnimationManager.Manager.currentState = PlayerAnimationManager.State.Idle;
+         //   PlayerAnimationManager.Manager.currentState = PlayerAnimationManager.State.Idle;
         }
 
         // Jump system
@@ -193,7 +199,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButton("Attack1"))
         {
-            PlayerAnimationManager.Manager.currentCombatState = PlayerAnimationManager.Combat.attack;
+        //    PlayerAnimationManager.Manager.currentCombatState = PlayerAnimationManager.Combat.attack;
         }
 
 
@@ -202,7 +208,11 @@ public class PlayerMovement : MonoBehaviour
 
 
     
-
+    void RefillStamina()
+    {
+        if(PlayerManager.Manager.hp > 0)
+        PlayerManager.Manager.stamina += staminaRefillValue * Time.deltaTime;
+    }
 
     void ApplyPlayerInfo()
     {
@@ -236,5 +246,15 @@ public class PlayerMovement : MonoBehaviour
     public void DisablePlayerMove()
     {
         PlayerManager.Manager.canMove = false;
+    }
+
+    public void DecreaseStamina(float value)
+    {
+        PlayerManager.Manager.stamina -= value;
+    }
+
+    public void DeattachPlayer()
+    {
+        PlayerManager.Manager.player = null;
     }
 }

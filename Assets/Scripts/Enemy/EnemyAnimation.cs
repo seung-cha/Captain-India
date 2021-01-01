@@ -20,6 +20,9 @@ public class EnemyAnimation : MonoBehaviour
  
     void Update()
     {
+        if(charAI.isStaggered)
+        { anim.Play(hurtString); return;}
+
         // is Chasing
         if (!charAI.detectionForceFalse)
         {

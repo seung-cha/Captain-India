@@ -15,10 +15,11 @@ public class DialogueTrigger : MonoBehaviour
     private void Start()
     {
         director = GetComponent<PlayableDirector>();
+        queued = false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag != "Player") { return; }
+        if(collision.tag != "Player" || PlayerManager.Manager.hp <= 0) { return; }
 
         if (!queued)
         {

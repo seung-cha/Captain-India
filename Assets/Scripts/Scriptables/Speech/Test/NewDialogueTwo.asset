@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e1db8cea0bc824ab96dd5f64734952, type: 3}
+  m_Name: NewDialogueTwo
+  m_EditorClassIdentifier: 
+  texts:
+  - image: {fileID: 2800000, guid: d7960ed2a1237c04b92018fa2d1b456a, type: 3}
+    speaker: Samrat
+    text: That was very easy
+  - image: {fileID: 2800000, guid: 84de2513d0f57bf48bbe3fef2aacec73, type: 3}
+    speaker: Samrat
+    text: Hehehehehe
+  - image: {fileID: 2800000, guid: 9a0a381f4ba4d6a4698a5942f03c4220, type: 3}
+    speaker: James
+    text: . . .
+  value: 000000000000000001000000

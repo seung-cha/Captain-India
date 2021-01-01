@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: DoubleJumpGuide
   m_EditorClassIdentifier: 
   texts:
-  - image: {fileID: 2800000, guid: 6edad88eff2e347479baf51ec81d231c, type: 3}
+  - image: {fileID: 2800000, guid: b3e5a25476f831441bca244530f53813, type: 3}
     speaker: Captain India
     text: Yikes...
-  - image: {fileID: 2800000, guid: 6edad88eff2e347479baf51ec81d231c, type: 3}
+  - image: {fileID: 2800000, guid: b3e5a25476f831441bca244530f53813, type: 3}
     speaker: Captain India
     text: Maybe I can climb up.
   - image: {fileID: 2800000, guid: 6edad88eff2e347479baf51ec81d231c, type: 3}

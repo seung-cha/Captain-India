@@ -269,6 +269,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636107462}
   m_CullTransparentMesh: 0
+--- !u!114 &765331256 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8131507961373947658, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
+  m_PrefabInstance: {fileID: 1530332259}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &767778053
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,9 +891,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 471457363, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
+      propertyPath: Sprite
+      value: 
+      objectReference: {fileID: 765331256}
+    - target: {fileID: 1943584928649704366, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
+      propertyPath: m_Name
+      value: SamratUISprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102038507808682786, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237560818155784365, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237560818155784365, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8285730863709376368, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
       propertyPath: m_Name
       value: PlayerManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285730863709376369, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
+      propertyPath: hp
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285730863709376369, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
+      propertyPath: stamina
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8285730863709376370, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
       propertyPath: m_LocalPosition.x
