@@ -257,4 +257,16 @@ public class PlayerMovement : MonoBehaviour
     {
         PlayerManager.Manager.player = null;
     }
+
+    public void ShakeCamera(float percentage, float frequency, float intensity)
+    {
+        PlayerManager.Manager.cameraShakeIntensity = intensity;
+        PlayerManager.Manager.cameraShakePercentage = percentage;
+        PlayerManager.Manager.cameraShakeMaxFrequency = frequency;
+    }
+
+    public void CreateSoundEffect(AudioClip audioClip)
+    {
+        SoundManager.Manager.CrateSoundEffect(audioClip, this.gameObject.transform.position);
+    }
 }

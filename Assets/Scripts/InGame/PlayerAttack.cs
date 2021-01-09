@@ -8,7 +8,19 @@ public class PlayerAttack : MonoBehaviour
     public float Intensity;
     public float duration;
     public int damage;
-   public void EnableCollider()
+
+    private PlayerMovement playerMovement;
+
+    public float shakeIntensity;
+    public float shakeFrequency;
+    public float shakePercentage;
+
+    public AudioClip[] hitSoundEffect;
+    private void Start()
+    {
+        playerMovement = GetComponent<PlayerMovement>();
+    }
+    public void EnableCollider()
     {
         attackCollider.gameObject.SetActive(true);
     }
@@ -44,6 +56,10 @@ public class PlayerAttack : MonoBehaviour
                 targetAI.staggerDuration = duration;
                 targetAI.health -= damage;
                 targetAI.isStaggered = true;
+
+                playerMovement.ShakeCamera(shakePercentage, shakeFrequency, shakeIntensity);
+                SoundManager.Manager.CrateSoundEffect(hitSoundEffect[Random.Range(0, hitSoundEffect.Length)], collision.gameObject.transform.position);
+
             }
         }
     }

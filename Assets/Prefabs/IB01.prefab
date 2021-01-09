@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moveOffset: 1.48
+  moveOffset: 1.7
   distance: 7
   health: 70
   Dattack:

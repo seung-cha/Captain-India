@@ -151,16 +151,23 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: DisablePlayerMove
+    functionName: DeattachPlayer
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0
-    functionName: DeattachPlayer
+    functionName: DisablePlayerMove
     data: 
     objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.16666667
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 7cce47fc5b68c72449a37a29e489129d, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

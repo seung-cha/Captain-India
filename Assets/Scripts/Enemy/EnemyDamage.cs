@@ -9,7 +9,7 @@ public class EnemyDamage : MonoBehaviour
     public float knockbackMultiplier;
     public Collider2D hitbox;
 
-
+    public AudioClip temp;
     private void Start()
     {
         hitbox.isTrigger = true;
@@ -36,6 +36,7 @@ public class EnemyDamage : MonoBehaviour
             }
 
             PlayerManager.Manager.isStaggered = true;
+            SoundManager.Manager.CrateSoundEffect(temp, collision.gameObject.transform.position);
         }
     }
 

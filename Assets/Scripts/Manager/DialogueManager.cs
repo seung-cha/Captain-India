@@ -59,6 +59,12 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
         CheckCurrentClip();
+
+        if(this.gameObject.activeInHierarchy == true)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+                Proceed();
+        }
     }
 
     public void EnqueueDialogue(Speech speech)

@@ -62,9 +62,12 @@ public class AI : MonoBehaviour
     {
         if (!quitting)
         {
-            GameObject particle = Instantiate(particleGameObject);
-            particle.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + particleSpawnOffset);
-            Destroy(particle, duration);
+            if (health <= 0)
+            {
+                GameObject particle = Instantiate(particleGameObject);
+                particle.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + particleSpawnOffset);
+                Destroy(particle, duration);
+            }
         }
 
         if (EnemyHolder.Manager.enemyAIs != null)

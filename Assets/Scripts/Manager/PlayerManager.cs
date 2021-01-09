@@ -45,7 +45,12 @@ public class PlayerManager : MonoBehaviour
 
 
    public CinemachineVirtualCamera playerCamera;
-    public CinemachineFramingTransposer cameraTransposer;
+   public CinemachineFramingTransposer cameraTransposer;
+    public CinemachineBasicMultiChannelPerlin channelPerlin;
+
+    public float cameraShakeIntensity;
+    public float cameraShakePercentage;
+    public float cameraShakeMaxFrequency;
 
     private void Awake()
     {
@@ -65,13 +70,16 @@ public class PlayerManager : MonoBehaviour
         maxWallJumpCount = SetWallJumpCount;
 
         playerCamera = GetComponent<CinemachineVirtualCamera>();
-       cameraTransposer = playerCamera.GetCinemachineComponent<CinemachineFramingTransposer>();       
+       cameraTransposer = playerCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
+        channelPerlin = playerCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
     }
 
     private void Update()
     {
         stamina = Mathf.Clamp(stamina, 0f, maxStamina);
         hp = Mathf.Clamp(hp, 0, maxHealth);
+        ShakeCamera();
+        
     }
     public void LookForThePlayer()
     {
@@ -81,5 +89,21 @@ public class PlayerManager : MonoBehaviour
     public GameObject GetPlayer()
     {
         return player;
+    }
+
+    private void ShakeCamera()
+    {
+        channelPerlin.m_FrequencyGain = cameraShakeIntensity;
+
+        if(cameraShakePercentage > 0f)
+        {
+            channelPerlin.m_AmplitudeGain = cameraShakeMaxFrequency;
+            cameraShakePercentage -= 1 * Time.deltaTime;
+        }
+        else
+        {
+            cameraShakePercentage = 0f;
+            channelPerlin.m_AmplitudeGain = 0f;
+        }
     }
 }
