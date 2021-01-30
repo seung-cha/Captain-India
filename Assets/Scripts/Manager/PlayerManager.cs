@@ -10,6 +10,8 @@ public class PlayerManager : MonoBehaviour
     public int hp;
     public float stamina;
 
+    public int damageMultiplier;
+
     public float speed;
     public float gravity;
     public int jumpCount;
@@ -47,6 +49,7 @@ public class PlayerManager : MonoBehaviour
    public CinemachineVirtualCamera playerCamera;
    public CinemachineFramingTransposer cameraTransposer;
     public CinemachineBasicMultiChannelPerlin channelPerlin;
+    public CinemachineConfiner cinemachineConfiner;
 
     public float cameraShakeIntensity;
     public float cameraShakePercentage;
@@ -68,10 +71,12 @@ public class PlayerManager : MonoBehaviour
     {
         maxJumpCount = SetJumpCount;
         maxWallJumpCount = SetWallJumpCount;
-
+        damageMultiplier = 1;
         playerCamera = GetComponent<CinemachineVirtualCamera>();
        cameraTransposer = playerCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
         channelPerlin = playerCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        cinemachineConfiner = playerCamera.GetComponent<CinemachineConfiner>();
+        
     }
 
     private void Update()
@@ -93,6 +98,8 @@ public class PlayerManager : MonoBehaviour
 
     private void ShakeCamera()
     {
+        if(player == null)
+        { return; }
         channelPerlin.m_FrequencyGain = cameraShakeIntensity;
 
         if(cameraShakePercentage > 0f)
@@ -106,4 +113,6 @@ public class PlayerManager : MonoBehaviour
             channelPerlin.m_AmplitudeGain = 0f;
         }
     }
+
+ 
 }

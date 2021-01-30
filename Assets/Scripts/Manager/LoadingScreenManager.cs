@@ -21,7 +21,7 @@ public class LoadingScreenManager : MonoBehaviour
             Manager = this;
 
         if (Manager != null && Manager != this)
-            Destroy(Manager.gameObject);
+            Destroy(this.gameObject);
 
         DontDestroyOnLoad(this.gameObject);
     }

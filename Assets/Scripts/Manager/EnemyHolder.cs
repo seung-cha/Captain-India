@@ -13,7 +13,7 @@ public class EnemyHolder : MonoBehaviour
             Manager = this;
 
         if (Manager != null && Manager != this)
-            Destroy(Manager.gameObject);
+            Destroy(this.gameObject);
 
         DontDestroyOnLoad(this.gameObject);
         enemyAIs = new Dictionary<GameObject, AI>();

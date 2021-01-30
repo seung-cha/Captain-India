@@ -37,12 +37,17 @@ public class DialogueManager : MonoBehaviour
     public int timeLineIndex;
     private void Awake()
     {
+        Debug.Log("Awake called");
         if (Manager == null)
             Manager = this;
 
         if (Manager != this && Manager != null)
-            Destroy(Manager.gameObject);
+        {
+            Destroy(this.gameObject);
+            Debug.Log("Found duplicate; destroying itself");
+        }
 
+        Debug.Log("Awake exited");
         DontDestroyOnLoad(this.gameObject);
     }
 
@@ -62,8 +67,15 @@ public class DialogueManager : MonoBehaviour
 
         if(this.gameObject.activeInHierarchy == true)
         {
+
             if (Input.GetKeyDown(KeyCode.LeftShift))
-                Proceed();
+            {
+                if (director == null || director.state != PlayState.Playing)
+                    Proceed();
+            
+            }
+            
+
         }
     }
 
@@ -114,6 +126,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (clips.Count > timeLineIndex && timeLineIndex >= 0)
             {
+                
                 if (clips.ElementAt(timeLineIndex) != null)
                 {
                     director.playableAsset = clips.ElementAt(timeLineIndex);
@@ -208,13 +221,9 @@ public class DialogueManager : MonoBehaviour
             nextButton.interactable = true; 
             return;
         }
-        if (director.playableAsset != null)
+        if (director.playableAsset != null && director.state != PlayState.Paused)
         {
-            nextButton.interactable = false;
-
-            // Check if the current animation has been played
-            if (director.state == PlayState.Paused)
-                nextButton.interactable = true;           
+            nextButton.interactable = false;    
         }
         else
             nextButton.interactable = true;

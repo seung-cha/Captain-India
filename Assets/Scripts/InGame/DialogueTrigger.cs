@@ -23,10 +23,14 @@ public class DialogueTrigger : MonoBehaviour
 
         if (!queued)
         {
-            if (director != null && asset != null)
+            if (director != null)
+            {
+                DialogueManager.Manager.director = this.director;
+                
+            }
+            if(asset != null)
             {
                 DialogueManager.Manager.clips = asset;
-                DialogueManager.Manager.director = director;
             }
             
             DialogueManager.Manager.EnqueueDialogue(item);           

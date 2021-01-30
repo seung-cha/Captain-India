@@ -32,7 +32,9 @@ public class PlayerMovement : MonoBehaviour
     {
         ridBody = GetComponent<Rigidbody2D>();
         boxCol = GetComponent<BoxCollider2D>();
+        PlayerManager.Manager.playerCamera.transform.position = this.gameObject.transform.position;
         PlayerManager.Manager.player = this.gameObject;
+        
         
     }
 
@@ -186,10 +188,18 @@ public class PlayerMovement : MonoBehaviour
                     PlayerManager.Manager.jumpCount--;
                 }
 
-                if(PlayerManager.Manager.isAgainstWall && PlayerManager.Manager.wallJumpCount > 0)
+                if(PlayerManager.Manager.isAgainstWall)
                 {
-                    Jump();
-                    PlayerManager.Manager.wallJumpCount--;
+                    if (PlayerManager.Manager.wallJumpCount > 0)
+                    {
+                        Jump();
+                        PlayerManager.Manager.wallJumpCount--;
+                    }
+                    else if (PlayerManager.Manager.jumpCount > 0 )
+                    {
+                        Jump();
+                        PlayerManager.Manager.jumpCount--;
+                    }
                 }
 
             }

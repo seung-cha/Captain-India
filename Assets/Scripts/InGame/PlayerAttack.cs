@@ -54,7 +54,7 @@ public class PlayerAttack : MonoBehaviour
 
 
                 targetAI.staggerDuration = duration;
-                targetAI.health -= damage;
+                targetAI.health -= damage * PlayerManager.Manager.damageMultiplier ;
                 targetAI.isStaggered = true;
 
                 playerMovement.ShakeCamera(shakePercentage, shakeFrequency, shakeIntensity);

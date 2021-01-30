@@ -338,6 +338,7 @@ MonoBehaviour:
   shakePercentage: 0.03
   hitSoundEffect:
   - {fileID: 8300000, guid: 7763f651426d3904891e25d765cd96ae, type: 3}
+  - {fileID: 8300000, guid: 58b82f1e498c05348bdf2cf277e7ab85, type: 3}
 --- !u!114 &737934289874178313
 MonoBehaviour:
   m_ObjectHideFlags: 0

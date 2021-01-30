@@ -62,7 +62,15 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 07c493bb548fcb54c854db9da3f08410
+    name: EffectVolume
+  - guid: eb1196cd428e9ae42a1c67e7779da2cc
+    name: MasterVolume
+  - guid: 3baba239e3844184888363d4e8e1ff64
+    name: MusicVolume
+  - guid: f7ac66d9504a6bc43a5e4868381f7173
+    name: VoiceVolume
   m_AudioMixerGroupViews:
   - guids:
     - b5c8ee54b44a56e44864732e0060a417
@@ -118,15 +126,41 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: ffc6469fdd24c754ba92fc36f3c823ff
   m_FloatValues:
+    fc2d2e91b0af063408dd7c8b13ec5566: 0.51
+    dc4cd5a1e89844d4fbf627ea6c8ec358: 0.869
+    1dfc2bb1f00e66d4495a8786ecb52620: 1.125
+    935cb122689c02c49b286a9d6a757a0e: 0.304
     5dc42b42d1d15cd4daee6c15773406b8: 0.682
+    c93ad8631ffd1294eb7cc1a00ee2bdf6: -2676
     01bf10847450c6240b07c06c1a6127f9: 1
+    86296994578ee4d4da8aa50496bae796: 4.3
+    f9516f351950ef7499ec02ddd1c406da: 4.57
+    19914675c8987894691f53e8c2956cdc: 2
+    625584f5eb0801f4fa548a5433c96cae: 0.666
+    6430c3a6479ce7c4daf070c483cdf4ec: 2143
+    c4181bc695523e147a758e82d936d476: 273
+    19b34037c5ca2784c891fec757c6a4db: 0.031
+    34d62e77a6429fc439a07be2f7a97412: 0.458
+    2feeeee7cffcd814d861466a134a45ef: 57
+    8e187e88e6c7bfb44b1cf6faa5e1a414: 0.04171297
+    82e05fc84183d374196651ea62afa8e6: -27.1
     3baba239e3844184888363d4e8e1ff64: 0
+    87fcdb59a73bded44a689b6d2b68330e: 0
+    dc0ea9a9b2fe9bc48999f281ac151a42: 2.4
+    2ab7eb5a6cd073a4580dedb3eae3f7ab: 15.3
+    cb60499ac8aa04349b2f04fd252c7b1b: 0.2
+    1fe94fba55045f24cbd3bb111fdb1f5c: -0.27
+    69bbb13b8f5558c41ac5efb151558ca8: 0.215
     5451de9b935f69a4c8da0dc311b24edf: 160
-    07c493bb548fcb54c854db9da3f08410: -6.991066
+    07c493bb548fcb54c854db9da3f08410: 0
     af8866bcc5f467447ac030681659afd0: 0
     77af4afce38b13b44ab98d73f449b056: 0.52599996
+    1272b43d8ae3ec147b76ab1f2d2a8d2b: 314
+    5181493d07c00cc41ba6aff91d0cbbd4: 0.204
     980627bdf55a3054898d4be6206deea4: 1877
     eb1196cd428e9ae42a1c67e7779da2cc: 0
+    48587b6edb90afc4b969376b39b5fdbb: -0
+    cad20e2fb4598174f87ccb101ecc4270: 0.833
   m_TransitionOverrides: {}
 --- !u!243 &1984683767455824888
 AudioMixerGroupController:

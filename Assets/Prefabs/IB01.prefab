@@ -651,6 +651,7 @@ MonoBehaviour:
   stunDuration: 0.14
   knockbackMultiplier: 3
   hitbox: {fileID: 4439402346343938614}
+  temp: {fileID: 8300000, guid: 81e5f40cf0f1c46458fd0c6ba3ac5fdc, type: 3}
 --- !u!1 &4466726518195266747
 GameObject:
   m_ObjectHideFlags: 0

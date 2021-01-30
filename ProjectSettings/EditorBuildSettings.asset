@@ -5,6 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/DebugStage/DebugStage.unity
+    guid: 219b7f4325946db45bc337470847f0e3
+  - enabled: 0
+    path: Assets/Scenes/DebugStage/DebugScene2.unity
+    guid: d7cf40dfe2b32444a82dde08756c3da3
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -18,9 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CaptainIndiaVideo.unity
     guid: 2fd849df2990cc74ba6761835e2db30c
   - enabled: 1
-    path: Assets/Scenes/DebugStage.unity
-    guid: 219b7f4325946db45bc337470847f0e3
+    path: Assets/Scenes/FirstScene.unity
+    guid: a546d9fcc7855774dacc84ee25f68534
   - enabled: 1
-    path: Assets/Scenes/DebugScene2.unity
-    guid: d7cf40dfe2b32444a82dde08756c3da3
+    path: Assets/Scenes/SecondScene.unity
+    guid: 5e88f636721adb14882cd51c0a1baec5
   m_configObjects: {}
