@@ -35,8 +35,9 @@ public class EnemyDamage : MonoBehaviour
                 PlayerManager.Manager.staggerDirection = staggerDirection;
             }
 
+            if(!PlayerManager.Manager.unInterruptable)
             PlayerManager.Manager.isStaggered = true;
-            SoundManager.Manager.CrateSoundEffect(temp, collision.gameObject.transform.position);
+           // SoundManager.Manager.CrateSoundEffect(temp, collision.gameObject.transform.position);
         }
     }
 

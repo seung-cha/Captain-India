@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Manager
+  - FieldObject
   layers:
   - Default
   - TransparentFX

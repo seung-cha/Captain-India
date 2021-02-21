@@ -9,15 +9,16 @@ public class PlayerAnimation : MonoBehaviour
 
     
     const string IDLE = "SamratIdleAnim";
-    const string PUNCH = "SamratPunchAnim";
+    public string PUNCH;
     const string RUN = "SamratRunAnim";
 
     public string dZ;
     public string nX;
-
+    public string dX;
     public string deathAnim;
 
     public float nXrequiredStamina;
+    public float dXrequiredStamina;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -31,7 +32,7 @@ public class PlayerAnimation : MonoBehaviour
         {
             animator.Play(deathAnim);
         }
-        if (PlayerManager.Manager.onDialogue)
+        if (PlayerManager.Manager.onDialogue || PlayerManager.Manager.isStaggered)
         { animator.Play(IDLE);  return; }
         // Ground check
 
@@ -56,6 +57,11 @@ public class PlayerAnimation : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Z))
                 {
                     animator.Play(dZ);
+                }
+
+                if(Input.GetKeyDown(KeyCode.X) && PlayerManager.Manager.stamina >= dXrequiredStamina)
+                {
+                    animator.Play(dX);
                 }
 
             }

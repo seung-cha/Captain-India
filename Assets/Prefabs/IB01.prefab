@@ -300,7 +300,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 12
+  m_GravityScale: 50
   m_Material: {fileID: 6200000, guid: 2f6ecd3e94f0f374ba77553a2d41e1fb, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -382,6 +382,8 @@ MonoBehaviour:
   speed: 2
   moveOffset: 1.7
   distance: 7
+  stopDistance: 1.2
+  chaseHeightLimit: 3
   health: 70
   Dattack:
     currentDelay: 0
@@ -406,12 +408,22 @@ MonoBehaviour:
   detectionForceFalse: 0
   attackForceFalse: 0
   playerDistance: 0
+  minimumStopDistance: 0
+  heightDifference: 0
   rid: {fileID: 4439402345327993823}
   isStaggered: 0
   staggerDuration: 0
   staggerDir: {x: 0, y: 0}
   particleGameObject: {fileID: 6192827459409295059, guid: 6bf5b8b9f83df4f41839e14b7185b438, type: 3}
   duration: 0.5
+  isGrounded: 0
+  boxSize: {x: 1.5, y: 0.2}
+  boxOffset: {x: 0, y: -0.05}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  groundGravity: 5
+  gravity: 50
 --- !u!1 &1140046658000520818
 GameObject:
   m_ObjectHideFlags: 0

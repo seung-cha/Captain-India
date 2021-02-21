@@ -8,6 +8,8 @@ public class AI : MonoBehaviour
     public float speed;
     public float moveOffset;
     public float distance;
+    public float stopDistance;
+    public float chaseHeightLimit;
     public int health;
    
    public Delay Dattack;
@@ -30,8 +32,11 @@ public class AI : MonoBehaviour
 
     [SerializeField]
     float playerDistance;
-
-   public Rigidbody2D rid;
+    [SerializeField]
+    private float minimumStopDistance;
+    [SerializeField]
+    private float heightDifference;
+    public Rigidbody2D rid;
     Vector2 vel;
 
     public bool isStaggered;
@@ -43,8 +48,18 @@ public class AI : MonoBehaviour
     public float duration;
     private float particleSpawnOffset;
 
-
+    public bool isGrounded;
+    public Vector2 boxSize;
+    public Vector2 boxOffset;
+    public LayerMask groundLayer;
+    private Vector2 footPosition;
     private bool quitting = false;
+
+    public float groundGravity;
+    public float gravity;
+
+
+    public bool unInterruptable;
     private void Awake()
     {
        
@@ -52,6 +67,7 @@ public class AI : MonoBehaviour
         wallPos = new Vector2[2];
         player = PlayerManager.Manager.GetPlayer();
         // Left
+     
     }
 
     private void OnApplicationQuit()
@@ -85,24 +101,30 @@ public class AI : MonoBehaviour
 
         if(EnemyHolder.Manager.enemyAIs != null)
         EnemyHolder.Manager.enemyAIs.Add(this.gameObject, this);
-        particleSpawnOffset = boxCol.bounds.extents.y; 
+        particleSpawnOffset = boxCol.bounds.extents.y;
+        unInterruptable = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-    
-        playerDistance = Vector2.Distance(this.gameObject.transform.position, player.transform.position);
-        if(health <= 0)
+         playerDistance = Vector2.Distance(this.gameObject.transform.position, player.transform.position);
+        minimumStopDistance = Mathf.Abs(this.gameObject.transform.position.x - player.transform.position.x);
+        heightDifference = Mathf.Abs(this.gameObject.transform.position.y - player.transform.position.y);
+        footPosition = new Vector2(boxCol.bounds.center.x, boxCol.bounds.min.y);
+
+
+        if (health <= 0)
         {
             Destroy(this.gameObject);
         }
         Flip();
         AttackDetection();
         DetectPlayer();
-       
+        GroundDetection();
     }
 
+    
     private void FixedUpdate()
     {
         Movement();
@@ -112,6 +134,14 @@ public class AI : MonoBehaviour
     private void LateUpdate()
     {
         Dattack.CoolDown();
+        /*
+        if(unInterruptable)
+        {
+            isStaggered = false;
+            staggerDuration = 0f;
+            staggerDir = Vector2.zero;
+        }
+        */
 
     }
 
@@ -190,7 +220,7 @@ public class AI : MonoBehaviour
            //     Debug.Log(hits.collider.tag);
            // ra }
            
-            if (playerDistance <= distance)
+            if (playerDistance <= distance && heightDifference <= chaseHeightLimit)
             {
               
                     Ddetection.able = true;
@@ -223,27 +253,30 @@ public class AI : MonoBehaviour
             {
                 if (Ddetection.able == true)
                 {
+                    // Start chasing if the player is within range
                     if (playerDistance >= moveOffset)
                     {
 
-                        if (targetIsOnLeft)
+                        if (targetIsOnLeft && minimumStopDistance >= stopDistance)
                         {
                             vel = new Vector2(-speed, vel.y);
                         }
-                        else if (!targetIsOnLeft)
+                        else if (!targetIsOnLeft && minimumStopDistance >= stopDistance)
                         {
                             vel = new Vector2(speed, vel.y);
                         }
+                        else
+                            vel = new Vector2(0, vel.y);
                     }
                     else
-                        vel = Vector2.zero;
+                        vel = new Vector2(0, vel.y);
                 }
                 else
-                    vel = Vector2.zero;
+                    vel = new Vector2(0, vel.y);
             }
             else
             {
-                vel = Vector2.zero;
+                vel = new Vector2(0, vel.y);
             }
         }
         else
@@ -259,7 +292,18 @@ public class AI : MonoBehaviour
         }
     }
 
+    private void GroundDetection()
+    {
+        isGrounded = Physics2D.BoxCast(footPosition +boxOffset, boxSize, 0f, Vector2.zero, 0f, groundLayer);
 
+        if (isGrounded)
+        {
+
+            rid.gravityScale = groundGravity;
+        }
+        else
+        rid.gravityScale = gravity;
+    }
 
 
     private void OnDrawGizmos()
@@ -276,6 +320,7 @@ public class AI : MonoBehaviour
         }
 
         Gizmos.DrawLine(boxCol.bounds.center, PlayerManager.Manager.player.transform.position);
+        Gizmos.DrawCube(footPosition + boxOffset, boxSize);
 
     }
 
@@ -296,6 +341,15 @@ public class AI : MonoBehaviour
     public void EnableAttack()
     {
         attackForceFalse = true;
+    }
+
+    public void canStagger()
+    {
+        unInterruptable = false;
+    }
+    public void cannotStagger()
+    {
+        unInterruptable = true;
     }
 }
 

@@ -53,9 +53,12 @@ public class PlayerAttack : MonoBehaviour
                 }
 
 
-                targetAI.staggerDuration = duration;
-                targetAI.health -= damage * PlayerManager.Manager.damageMultiplier ;
-                targetAI.isStaggered = true;
+                targetAI.health -= damage * PlayerManager.Manager.damageMultiplier;
+                if (!targetAI.unInterruptable || PlayerManager.Manager.ignoreUninterruptable)
+                {
+                    targetAI.staggerDuration = duration;
+                    targetAI.isStaggered = true;
+                }
 
                 playerMovement.ShakeCamera(shakePercentage, shakeFrequency, shakeIntensity);
                 SoundManager.Manager.CrateSoundEffect(hitSoundEffect[Random.Range(0, hitSoundEffect.Length)], collision.gameObject.transform.position);

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class Cheats : MonoBehaviour
@@ -108,5 +109,32 @@ public class Cheats : MonoBehaviour
             staminaHackEnabled = true;
             staminaHackText.gameObject.SetActive(true);
         }
+    }
+
+    public void ToMainMenu()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            DialogueManager.Manager.timeLineIndex = -1;
+            DialogueManager.Manager.clips = null;
+            DialogueManager.Manager.director = null;
+            PlayerManager.Manager.canMove = true;
+            PlayerManager.Manager.onDialogue = false;
+            DialogueManager.Manager.HideDialogue();
+
+            PauseManager.Manager.isPaused = false;
+            Time.timeScale = 1.0f;
+
+            PauseManager.Manager.pauseMenu.SetActive(false);
+            SceneManager.LoadScene(0);
+            Refill();
+        }
+
+    }
+
+    private void Refill()
+    {
+        PlayerManager.Manager.hp = PlayerManager.Manager.maxHealth;
+        PlayerManager.Manager.stamina = PlayerManager.Manager.maxStamina;
     }
 }

@@ -27,6 +27,13 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     bool showGizmo;
+
+    private int lastHealth;
+
+    public float hurtSoundDelay;
+    private float HurtSoundDelay;
+
+
     // Cam
     private void Awake()
     {
@@ -34,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
         boxCol = GetComponent<BoxCollider2D>();
         PlayerManager.Manager.playerCamera.transform.position = this.gameObject.transform.position;
         PlayerManager.Manager.player = this.gameObject;
-        
         
     }
 
@@ -48,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
         wallPos = new Vector2[2];
         PlayerManager.Manager.gravity = ridBody.gravityScale;
         PlayerManager.Manager.LookForThePlayer();
+        lastHealth = PlayerManager.Manager.hp;
+        
     }
 
     // Update is called once per frame
@@ -57,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
         CheckCondition();
         ApplyPlayerInfo();
         RefillStamina();
+        HurtSoundGeneration();
+        Enhance();
         // temp
 
     
@@ -73,6 +83,12 @@ public class PlayerMovement : MonoBehaviour
     private void LateUpdate()
     {
         PushBackPlayer();
+
+        if (PlayerManager.Manager.onDialogue)
+        {
+            PlayerManager.Manager.canMove = false;
+        }
+
     }
 
 
@@ -235,6 +251,26 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    void HurtSoundGeneration()
+    {
+        if(PlayerManager.Manager.hp < lastHealth && PlayerManager.Manager.player != null)
+        {
+            if(HurtSoundDelay <= 0.0f)
+            {
+                SoundManager.Manager.CrateSoundEffect(PlayerManager.Manager.hurtSoundClips[Random.Range(0, PlayerManager.Manager.hurtSoundClips.Length)], this.gameObject.transform.position);
+                lastHealth = PlayerManager.Manager.hp;
+                HurtSoundDelay = hurtSoundDelay;
+            }
+
+        }
+
+        if (HurtSoundDelay > 0.0f)
+            HurtSoundDelay -= 1 * Time.deltaTime;
+
+        if (PlayerManager.Manager.hp > lastHealth)
+            lastHealth = PlayerManager.Manager.hp;
+    }
+
 
     private void OnDrawGizmos()
     {
@@ -278,5 +314,59 @@ public class PlayerMovement : MonoBehaviour
     public void CreateSoundEffect(AudioClip audioClip)
     {
         SoundManager.Manager.CrateSoundEffect(audioClip, this.gameObject.transform.position);
+    }
+
+    public void CreateRandomSoundEffect(AudioClip[] audioClip)
+    {
+        AudioClip audClip = audioClip[Random.Range(0, audioClip.Length)];
+        SoundManager.Manager.CrateSoundEffect(audClip, this.gameObject.transform.position);
+    }
+
+    public void EnhancePlayer(float duration)
+    {
+        PlayerManager.Manager.enhancementDuration = duration;
+    }
+
+    public void HealPlayer(int value)
+    {
+        PlayerManager.Manager.hp += value;
+    }
+    private void Enhance()
+    {
+        if(PlayerManager.Manager.player == null) { return; }
+
+        if (PlayerManager.Manager.enhancementDuration > 0)
+        {
+            PlayerManager.Manager.enhancementDuration -= 1 * Time.deltaTime;
+            PlayerManager.Manager.speed = PlayerManager.Manager.enhancedSpeed;
+            PlayerManager.Manager.jumpHeight = PlayerManager.Manager.enhancedJumpHeight;
+            PlayerManager.Manager.damageMultiplier = PlayerManager.Manager.enhancedDamageMultiplier;
+        }
+        else
+        {
+            PlayerManager.Manager.enhancementDuration = -1;
+            PlayerManager.Manager.speed = PlayerManager.Manager.defaultSpeed;
+            PlayerManager.Manager.jumpHeight = PlayerManager.Manager.defaultJumpHeight;
+            PlayerManager.Manager.damageMultiplier = PlayerManager.Manager.defaultDamageMultiplier;
+        }
+
+    }
+
+    public void canBeStaggered()
+    {
+        PlayerManager.Manager.unInterruptable = false;
+    }
+    public void CannotBeStaggered()
+    {
+        PlayerManager.Manager.unInterruptable = true;
+    }
+
+    public void canIgnoreInterruptable()
+    {
+        PlayerManager.Manager.ignoreUninterruptable = true;
+    }
+    public void cannotIgnoreInterruptable()
+    {
+        PlayerManager.Manager.ignoreUninterruptable = false;
     }
 }

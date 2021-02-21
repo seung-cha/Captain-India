@@ -26,6 +26,8 @@ public class PlayerManager : MonoBehaviour
     public bool isAgainstWall;
     public bool canMove;
     public bool onDialogue;
+    public bool unInterruptable;
+    public bool ignoreUninterruptable;
 
     public bool isStaggered;
     public float staggerDuration;
@@ -33,6 +35,20 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject player;
 
+    public AudioClip[] hurtSoundClips;
+
+    public float enhancementDuration;
+
+    //store default values
+    public float defaultSpeed;
+    public float defaultGravity;
+    public float defaultJumpCount;
+    public float defaultJumpHeight;
+    public int defaultDamageMultiplier;
+
+    public float enhancedSpeed;
+    public float enhancedJumpHeight;
+    public int enhancedDamageMultiplier;
     public int maxJumpCount
     { get; private set; }
 
@@ -76,8 +92,19 @@ public class PlayerManager : MonoBehaviour
        cameraTransposer = playerCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
         channelPerlin = playerCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         cinemachineConfiner = playerCamera.GetComponent<CinemachineConfiner>();
-        
-    }
+
+       defaultSpeed = speed;
+     defaultGravity = gravity;
+     defaultJumpCount = jumpCount;
+     defaultJumpHeight = jumpHeight;
+        defaultDamageMultiplier = 1;
+        enhancedJumpHeight = defaultJumpHeight * 1.8f;
+        enhancedSpeed = defaultSpeed * 1.8f;
+        enhancedDamageMultiplier = 2;
+
+        unInterruptable = false;
+        ignoreUninterruptable = false;
+}
 
     private void Update()
     {

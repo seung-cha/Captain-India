@@ -14,18 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texts:
   - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
-    speaker: '[NARRATOR]'
-    text: '*Phone is ringing'
-  - image: {fileID: 2800000, guid: d7960ed2a1237c04b92018fa2d1b456a, type: 3}
-    speaker: Captain India
-    text: Hello, this is Captain India
+    speaker: 
+    text: '[Phone is ringing]'
   - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
     speaker: ???
-    text: Captain India! I need you here now!
+    text: Captain India! This is Master Rani. I have something to tell you right
+      now. Meet me at the HQ right now!
+  - image: {fileID: 2800000, guid: 36f25420a38d0ab49ae3ca12d2a6ff70, type: 3}
+    speaker: Master Rani
+    text: I cannot tell you what it is right now. You must hurry!
   - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
-    speaker: ???
-    text: This is not a joke. Meet me at the HQ asap!
-  - image: {fileID: 2800000, guid: d7960ed2a1237c04b92018fa2d1b456a, type: 3}
-    speaker: Captain India
-    text: ... OK
-  value: 0000000000000000010000000100000000000000
+    speaker: Master Rani
+    text: '[Phone hung up hurriedly]'
+  value: 00000000010000000100000000000000
