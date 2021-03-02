@@ -7718,7 +7718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178401933372798318, guid: c628187e129ab3d4c9ee81a813e5838a, type: 3}
       propertyPath: gameScenes.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 178401933372798318, guid: c628187e129ab3d4c9ee81a813e5838a, type: 3}
       propertyPath: gameScenes.Array.data[2]
@@ -7727,6 +7727,10 @@ PrefabInstance:
     - target: {fileID: 178401933372798318, guid: c628187e129ab3d4c9ee81a813e5838a, type: 3}
       propertyPath: gameScenes.Array.data[3]
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 178401933372798318, guid: c628187e129ab3d4c9ee81a813e5838a, type: 3}
+      propertyPath: gameScenes.Array.data[4]
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 178401933372798319, guid: c628187e129ab3d4c9ee81a813e5838a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7781,6 +7785,62 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8585311512353686890, guid: c27cd7b2be146cc429b367f62312e3c6, type: 3}
+      propertyPath: loadingInfos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585311512353686890, guid: c27cd7b2be146cc429b367f62312e3c6, type: 3}
+      propertyPath: loadingInfos.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: fa012598a69332740b48e08532ca7561, type: 2}
+    - target: {fileID: 8585311512353686890, guid: c27cd7b2be146cc429b367f62312e3c6, type: 3}
+      propertyPath: loadingInfos.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: fa012598a69332740b48e08532ca7561, type: 2}
+    - target: {fileID: 8585311512353686890, guid: c27cd7b2be146cc429b367f62312e3c6, type: 3}
+      propertyPath: loadingInfos.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: fa012598a69332740b48e08532ca7561, type: 2}
+    - target: {fileID: 8585311512353686890, guid: c27cd7b2be146cc429b367f62312e3c6, type: 3}
+      propertyPath: loadingInfos.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: fa012598a69332740b48e08532ca7561, type: 2}
+    - target: {fileID: 8585311512353686890, guid: c27cd7b2be146cc429b367f62312e3c6, type: 3}
+      propertyPath: loadingInfos.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: fa012598a69332740b48e08532ca7561, type: 2}
+    - target: {fileID: 8585311512353686890, guid: c27cd7b2be146cc429b367f62312e3c6, type: 3}
+      propertyPath: loadingInfos.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: fa012598a69332740b48e08532ca7561, type: 2}
+    - target: {fileID: 8585311512353686890, guid: c27cd7b2be146cc429b367f62312e3c6, type: 3}
+      propertyPath: loadingInfos.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: fa012598a69332740b48e08532ca7561, type: 2}
+    - target: {fileID: 8585311512353686890, guid: c27cd7b2be146cc429b367f62312e3c6, type: 3}
+      propertyPath: loadingInfos.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: fa012598a69332740b48e08532ca7561, type: 2}
+    - target: {fileID: 8585311512353686890, guid: c27cd7b2be146cc429b367f62312e3c6, type: 3}
+      propertyPath: loadingInfos.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: fa012598a69332740b48e08532ca7561, type: 2}
+    - target: {fileID: 8585311512353686890, guid: c27cd7b2be146cc429b367f62312e3c6, type: 3}
+      propertyPath: loadingInfos.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: fa012598a69332740b48e08532ca7561, type: 2}
+    - target: {fileID: 8585311512353686890, guid: c27cd7b2be146cc429b367f62312e3c6, type: 3}
+      propertyPath: sceneIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585311512353686890, guid: c27cd7b2be146cc429b367f62312e3c6, type: 3}
+      propertyPath: loadingInfos.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: fa012598a69332740b48e08532ca7561, type: 2}
+    - target: {fileID: 8585311512353686890, guid: c27cd7b2be146cc429b367f62312e3c6, type: 3}
+      propertyPath: loadingInfos.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 43ca011d3e83d5a4cb3765ebbf0a5bf0, type: 2}
     - target: {fileID: 8585311512353686891, guid: c27cd7b2be146cc429b367f62312e3c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 532.1548

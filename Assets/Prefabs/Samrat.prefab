@@ -245,7 +245,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  boxSize: {x: 0.9, y: 0.25}
+  boxSize: {x: 0.85, y: 0.25}
   wallLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -357,5 +357,5 @@ MonoBehaviour:
   nX: SamratMultiPunch
   dX: SamratPowerUp
   deathAnim: SamratDie
-  nXrequiredStamina: 35
+  nXrequiredStamina: 30
   dXrequiredStamina: 70

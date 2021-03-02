@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e1db8cea0bc824ab96dd5f64734952, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: 
+  texts:
+  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
+    speaker: Naveein
+    text: Master Rani is in this facility. I can sense his power on the lower floor.
+  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
+    speaker: Naveein
+    text: There might be new enemies that you haven't faced before.
+  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
+    speaker: Naveein
+    text: Captain India! Don't be afraid of using your power. Defeat everything on
+      the way!
+  value: 010000000100000001000000

@@ -115,6 +115,9 @@ public class Cheats : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex != 0)
         {
+            LoadingScreenManager.Manager.sceneIndex = 0;
+            SceneManager.LoadScene(1);
+
             DialogueManager.Manager.timeLineIndex = -1;
             DialogueManager.Manager.clips = null;
             DialogueManager.Manager.director = null;
@@ -126,7 +129,7 @@ public class Cheats : MonoBehaviour
             Time.timeScale = 1.0f;
 
             PauseManager.Manager.pauseMenu.SetActive(false);
-            SceneManager.LoadScene(0);
+          
             Refill();
         }
 

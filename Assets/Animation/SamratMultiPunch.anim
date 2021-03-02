@@ -688,14 +688,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: DisablePlayerMove
+    functionName: CannotBeStaggered
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0
-    functionName: CannotBeStaggered
+    functionName: DisablePlayerMove
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -706,13 +706,6 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: ce866703a1c478d46a2b7977ff901cdd, type: 3}
     floatParameter: 5
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.33333334
-    functionName: canBeStaggered
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.41666666
@@ -789,6 +782,20 @@ AnimationClip:
     functionName: CreateSoundEffect
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: 094d9c04a91b871458cf3295ed256c40, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.3
+    functionName: DecreaseStamina
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 5
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.4166666
+    functionName: canBeStaggered
+    data: 
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

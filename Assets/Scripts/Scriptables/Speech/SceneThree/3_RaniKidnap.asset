@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e1db8cea0bc824ab96dd5f64734952, type: 3}
+  m_Name: 3_RaniKidnap
+  m_EditorClassIdentifier: 
+  texts:
+  - image: {fileID: 2800000, guid: d4b9c6a427cb9f5469c27b3e9d5f337e, type: 3}
+    speaker: Master Rani
+    text: Captain India!!!
+  - image: {fileID: 2800000, guid: 28166731588bb7640989566eb221fdef, type: 3}
+    speaker: Captain India
+    text: Master Rani!!
+  - image: {fileID: 0}
+    speaker: 
+    text: '[Captain India starts to charge his power] '
+  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
+    speaker: Voice in the head
+    text: You better not do that Captain India. Master Rani will be in danger.
+  - image: {fileID: 2800000, guid: 28166731588bb7640989566eb221fdef, type: 3}
+    speaker: Captain India
+    text: 'huh??? '
+  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
+    speaker: Naveein
+    text: I am Naveein. I can telepathize people and communicate with them through
+      their mind
+  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
+    speaker: Naveein
+    text: Let's make this conversation short. I know you wanna rescue Master Rani.
+      I'll help you. So let's go!
+  value: 01000000000000000000000001000000000000000100000001000000
