@@ -19,7 +19,7 @@ MonoBehaviour:
   - image: {fileID: 2800000, guid: 28166731588bb7640989566eb221fdef, type: 3}
     speaker: Captain India
     text: Master Rani!!
-  - image: {fileID: 0}
+  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
     speaker: 
     text: '[Captain India starts to charge his power] '
   - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
