@@ -351,6 +351,11 @@ public class AI : MonoBehaviour
     {
         unInterruptable = true;
     }
+
+    public void CreateSoundEffect(AudioClip audioClip)
+    {
+        SoundManager.Manager.CrateSoundEffect(audioClip, this.gameObject.transform.position);
+    }
 }
 
 
@@ -372,4 +377,6 @@ public class Delay
             currentDelay = currentDelay - 1 * Time.deltaTime;
         }
     }
+
+
 }

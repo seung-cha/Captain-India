@@ -35,13 +35,9 @@ public class Cheats : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if(damageHackEnabled)       
-            PlayerManager.Manager.damageMultiplier = 100;        
-        else       
-            PlayerManager.Manager.damageMultiplier = defaultDamage;
 
+    private void Update()
+    {
         if (jumpHackEnabled)
             PlayerManager.Manager.jumpCount = defaultJumpCount;
 
@@ -50,6 +46,12 @@ public class Cheats : MonoBehaviour
 
         if (staminaHackEnabled)
             PlayerManager.Manager.stamina = defaultStamina;
+    }
+    void LateUpdate()
+    {
+        if(damageHackEnabled)       
+            PlayerManager.Manager.damageMultiplier = 100;        
+    
 
 
     }

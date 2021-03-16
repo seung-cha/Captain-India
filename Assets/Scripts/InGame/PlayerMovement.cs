@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
         if(PlayerManager.Manager.isStaggered)
         {
 
-            ridBody.velocity = PlayerManager.Manager.staggerDirection * PlayerManager.Manager.speed;
+            ridBody.velocity = PlayerManager.Manager.staggerDirection * 6;
         }
 
     }

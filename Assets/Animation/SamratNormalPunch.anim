@@ -171,7 +171,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 12
+        value: 8
         inSlope: 0
         outSlope: 0
         tangentMode: 69
@@ -592,7 +592,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 12
+        value: 8
         inSlope: 0
         outSlope: 0
         tangentMode: 69
@@ -714,6 +714,13 @@ AnimationClip:
     messageOptions: 0
   - time: 0
     functionName: canBeStaggered
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.016666668
+    functionName: cannotIgnoreInterruptable
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

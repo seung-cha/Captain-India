@@ -21,6 +21,6 @@ MonoBehaviour:
     text: There might be new enemies that you haven't faced before.
   - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
     speaker: Naveein
-    text: Captain India! Don't be afraid of using your power. Defeat everything on
+    text: Captain India! Don't be afraid to use your power. Defeat everything on
       the way!
   value: 010000000100000001000000

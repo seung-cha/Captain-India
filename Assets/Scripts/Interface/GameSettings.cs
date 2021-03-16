@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Linq;
 
 public class GameSettings : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class GameSettings : MonoBehaviour
     int currentIndex;
     private void Start()
     {
-        res = Screen.resolutions;
+        res = Screen.resolutions.Where(resolution => resolution.refreshRate == 60).ToArray();
         resDropDown.ClearOptions();
 
         List<string> resOptions = new List<string>();

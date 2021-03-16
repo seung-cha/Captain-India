@@ -3088,7 +3088,7 @@ GameObject:
   - component: {fileID: 1109116553}
   - component: {fileID: 1109116552}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: BackgroundMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3104,9 +3104,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2636688619675432273, guid: 6e0dea1ee0d1c654dafcc9b45cd67525, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 347267899ab932947ba5627dd9716ac3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 73680b7eea2934c4d89761e166101829, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7187,7 +7187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1559787687267476744, guid: 109850422c04f0345a2b84ce93192dfb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -10.0998535
+      value: -10.099609
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 109850422c04f0345a2b84ce93192dfb, type: 3}
@@ -7660,6 +7660,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 178401931843980956, guid: c628187e129ab3d4c9ee81a813e5838a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 178401931843981024, guid: c628187e129ab3d4c9ee81a813e5838a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -7718,7 +7722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178401933372798318, guid: c628187e129ab3d4c9ee81a813e5838a, type: 3}
       propertyPath: gameScenes.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 178401933372798318, guid: c628187e129ab3d4c9ee81a813e5838a, type: 3}
       propertyPath: gameScenes.Array.data[2]
@@ -7731,6 +7735,10 @@ PrefabInstance:
     - target: {fileID: 178401933372798318, guid: c628187e129ab3d4c9ee81a813e5838a, type: 3}
       propertyPath: gameScenes.Array.data[4]
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 178401933372798318, guid: c628187e129ab3d4c9ee81a813e5838a, type: 3}
+      propertyPath: gameScenes.Array.data[5]
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 178401933372798319, guid: c628187e129ab3d4c9ee81a813e5838a, type: 3}
       propertyPath: m_LocalPosition.x
