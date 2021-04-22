@@ -9,7 +9,7 @@ public class PauseManager : MonoBehaviour
 
     public bool isPaused;
     public GameObject pauseMenu;
-    public List<int> gameScenes;
+    public List<int> notGameScenes;
     void Start()
     {
         if (Manager == null)
@@ -29,7 +29,7 @@ public class PauseManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if(gameScenes.Contains(SceneManager.GetActiveScene().buildIndex))
+            if(!notGameScenes.Contains(SceneManager.GetActiveScene().buildIndex))
             {
                 // if the game is running, pause the game. Not, unpause the game
                if(!isPaused)

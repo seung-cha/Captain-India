@@ -28,7 +28,9 @@ public class PlayerManager : MonoBehaviour
     public bool onDialogue;
     public bool unInterruptable;
     public bool ignoreUninterruptable;
-
+    public bool enhanced;
+    public bool isInvincible;
+    public bool awakened;
     public bool isStaggered;
     public float staggerDuration;
     public Vector2 staggerDirection;

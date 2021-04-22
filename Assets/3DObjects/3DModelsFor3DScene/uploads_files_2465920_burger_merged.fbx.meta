@@ -1,0 +1,276 @@
+fileFormatVersion: 2
+guid: cc0eb2101485a8148b86e7d5f98dac9a
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable:
+  - first:
+      74: 5760001922613397976
+    second: Cylinder|Area.000Action.001
+  - first:
+      74: -3272019286605827190
+    second: Cylinder|Area.001Action
+  - first:
+      74: -4422342216487725967
+    second: Cylinder|Area.002Action
+  - first:
+      74: -5442502000658769264
+    second: Cylinder|Camera.001Action
+  - first:
+      74: 7942957976183006095
+    second: Cylinder|Camera.002Action.001
+  - first:
+      74: -3299178882980226264
+    second: Cylinder|CameraAction
+  - first:
+      74: -1565937593473639013
+    second: Cylinder|Cylinder.001Action
+  - first:
+      74: 7103945774817401546
+    second: Cylinder|Cylinder.003Action
+  - first:
+      74: 8918827763047035496
+    second: Cylinder|Cylinder.004Action
+  - first:
+      74: 9078188308105296935
+    second: Cylinder|Cylinder.005Action
+  - first:
+      74: 1423703551112255147
+    second: Cylinder|Cylinder.007Action
+  - first:
+      74: -7932458643231181891
+    second: Cylinder|Cylinder.008Action
+  - first:
+      74: -88723805440604879
+    second: Cylinder|CylinderAction
+  - first:
+      74: -5315980108583086191
+    second: Cylinder|EmptyAction
+  - first:
+      74: -3359535933777067571
+    second: Cylinder|Plane.001Action
+  - first:
+      74: 5270737530955641581
+    second: Cylinder|Plane.002Action
+  - first:
+      74: -7212192404024439871
+    second: Cylinder|Plane.004Action
+  - first:
+      74: -417588458890345377
+    second: Cylinder|Plane.005Action
+  - first:
+      74: -3855086529238533309
+    second: Cylinder|Point.001Action
+  - first:
+      74: 5457968995836183800
+    second: Cylinder|Shader NodetreeAction.002
+  - first:
+      74: -3249892080874433669
+    second: Cube.016|Area.000Action.001
+  - first:
+      74: -5824561297944460594
+    second: Cube.016|Area.001Action
+  - first:
+      74: 6484501437996664243
+    second: Cube.016|Area.002Action
+  - first:
+      74: -2188632371662270104
+    second: Cube.016|Camera.001Action
+  - first:
+      74: 4728698625679140695
+    second: Cube.016|Camera.002Action.001
+  - first:
+      74: 3186524369390001964
+    second: Cube.016|CameraAction
+  - first:
+      74: 6099470626939034803
+    second: Cube.016|Cylinder.001Action
+  - first:
+      74: -2867309032004338370
+    second: Cube.016|Cylinder.003Action
+  - first:
+      74: 1905551002851378510
+    second: Cube.016|Cylinder.004Action
+  - first:
+      74: 4274887068644426779
+    second: Cube.016|Cylinder.005Action
+  - first:
+      74: 229475362235107071
+    second: Cube.016|Cylinder.007Action
+  - first:
+      74: -2568654251385578597
+    second: Cube.016|Cylinder.008Action
+  - first:
+      74: -8364997119709052869
+    second: Cube.016|CylinderAction
+  - first:
+      74: 7788685176678362
+    second: Cube.016|EmptyAction
+  - first:
+      74: -6418012148846326810
+    second: Cube.016|Plane.001Action
+  - first:
+      74: -459366779489721411
+    second: Cube.016|Plane.002Action
+  - first:
+      74: -6680498300000350221
+    second: Cube.016|Plane.004Action
+  - first:
+      74: -2343354399147741463
+    second: Cube.016|Plane.005Action
+  - first:
+      74: 8968486600290988866
+    second: Cube.016|Point.001Action
+  - first:
+      74: -3372375561349974668
+    second: Cube.016|Shader NodetreeAction.002
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 06caf40a46ba7934cb47568dd3bfbec1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 1855f8e7c3faac74f9f006f0e493f47f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bread_outside._top
+    second: {fileID: 2100000, guid: 50fc13a06e80a5c4bbc74c9013d29e0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bread_outside._top.002
+    second: {fileID: 2100000, guid: 6b0d89ca90896e847865e028e3d79430, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cheese
+    second: {fileID: 2100000, guid: da849d7c50823f14094cc2f1caa80bfc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fries
+    second: {fileID: 2100000, guid: 318b99caab7a88f479d70cc2c03942c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fries_dark
+    second: {fileID: 2100000, guid: 2164373f6fd506f448e695c4311e8c06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: meat
+    second: {fileID: 2100000, guid: b1ce7aeb6a2e53e40aea8eed79542a8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: onion_top
+    second: {fileID: 2100000, guid: 0c7a557e967b0414b9387db241ab18e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pit
+    second: {fileID: 2100000, guid: 8d5ee8ea79d40da49b9adf6ed505c88c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: side
+    second: {fileID: 2100000, guid: 8911072e609435e4c86a24695f60ddd2, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

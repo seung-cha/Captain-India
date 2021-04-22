@@ -68,7 +68,7 @@ public class DialogueManager : MonoBehaviour
         if(this.gameObject.activeInHierarchy == true)
         {
 
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.LeftControl))
             {
                 if (director == null || director.state != PlayState.Playing)
                     Proceed();

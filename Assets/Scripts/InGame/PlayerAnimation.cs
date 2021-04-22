@@ -9,16 +9,17 @@ public class PlayerAnimation : MonoBehaviour
 
     
     const string IDLE = "SamratIdleAnim";
-    public string PUNCH;
+    const string WPUNCH = "SamratNormalPunch";
+    const string HPUNCH = "SamratMultiPunch";
+    const string KICK = "SamratPushKick";
+    const string POWERUP = "SamratPowerUp";
+    const string BEAM = "SamratKuganBeam";
+    const string DIE = "SamratDie";
     const string RUN = "SamratRunAnim";
 
-    public string dZ;
-    public string nX;
-    public string dX;
-    public string deathAnim;
-
-    public float nXrequiredStamina;
-    public float dXrequiredStamina;
+    public float heavyPunchRequiretedStamina;
+    public float powerUpRequiredStamina;
+    public float kuganBeamRequiredStamina;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -30,7 +31,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         if(PlayerManager.Manager.hp <= 0)
         {
-            animator.Play(deathAnim);
+            animator.Play(DIE);
         }
         if (PlayerManager.Manager.onDialogue || PlayerManager.Manager.isStaggered)
         { animator.Play(IDLE);  return; }
@@ -56,12 +57,12 @@ public class PlayerAnimation : MonoBehaviour
                 // 2 Attacks
                 if (Input.GetKeyDown(KeyCode.Z))
                 {
-                    animator.Play(dZ);
+                    animator.Play(KICK);
                 }
 
-                if(Input.GetKeyDown(KeyCode.X) && PlayerManager.Manager.stamina >= dXrequiredStamina)
+                if(Input.GetKeyDown(KeyCode.X) && PlayerManager.Manager.stamina >= powerUpRequiredStamina)
                 {
-                    animator.Play(dX);
+                    animator.Play(POWERUP);
                 }
 
             }
@@ -70,12 +71,20 @@ public class PlayerAnimation : MonoBehaviour
                 // 5 Attacks
                 if (Input.GetKeyDown(KeyCode.Z))
                 {
-                    animator.Play(PUNCH);
+                    animator.Play(WPUNCH);
                 }
 
-                if(Input.GetKeyDown(KeyCode.X) && PlayerManager.Manager.stamina >= nXrequiredStamina)
+                if(Input.GetKeyDown(KeyCode.X) && PlayerManager.Manager.stamina >= heavyPunchRequiretedStamina)
                 {
-                    animator.Play(nX);
+                    animator.Play(HPUNCH);
+                }
+
+                if (PlayerManager.Manager.awakened)
+                {
+                    if (Input.GetKeyDown(KeyCode.C) && PlayerManager.Manager.stamina >= kuganBeamRequiredStamina)
+                    {
+                        animator.Play(BEAM);
+                    }
                 }
             }
            

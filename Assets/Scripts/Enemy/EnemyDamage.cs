@@ -18,8 +18,11 @@ public class EnemyDamage : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            if(PlayerManager.Manager.isInvincible)
+            { return; }
+
             PlayerManager.Manager.hp -= damage;
-            PlayerManager.Manager.staggerDuration = stunDuration;
+          
 
             // if The player is on the left side of the enemy           
             if (PlayerManager.Manager.transform.position.x < this.gameObject.transform.position.x)
@@ -35,8 +38,11 @@ public class EnemyDamage : MonoBehaviour
                 PlayerManager.Manager.staggerDirection = staggerDirection;
             }
 
-            if(!PlayerManager.Manager.unInterruptable)
-            PlayerManager.Manager.isStaggered = true;
+            if (!PlayerManager.Manager.unInterruptable)
+            {
+                PlayerManager.Manager.staggerDuration = stunDuration;
+                PlayerManager.Manager.isStaggered = true;
+            }
            // SoundManager.Manager.CrateSoundEffect(temp, collision.gameObject.transform.position);
         }
     }

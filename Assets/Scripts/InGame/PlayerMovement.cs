@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     BoxCollider2D boxCol;
     int moveValue;
    public float staminaRefillValue;
-
+    public bool awakened;
 
     // Ground
     public LayerMask groundLayer;
@@ -55,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
         PlayerManager.Manager.gravity = ridBody.gravityScale;
         PlayerManager.Manager.LookForThePlayer();
         lastHealth = PlayerManager.Manager.hp;
+       
         
     }
 
@@ -67,9 +68,10 @@ public class PlayerMovement : MonoBehaviour
         RefillStamina();
         HurtSoundGeneration();
         Enhance();
+        PlayerManager.Manager.awakened = awakened;
         // temp
 
-    
+
 
 
     }
@@ -337,6 +339,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (PlayerManager.Manager.enhancementDuration > 0)
         {
+            PlayerManager.Manager.enhanced = true;
             PlayerManager.Manager.enhancementDuration -= 1 * Time.deltaTime;
             PlayerManager.Manager.speed = PlayerManager.Manager.enhancedSpeed;
             PlayerManager.Manager.jumpHeight = PlayerManager.Manager.enhancedJumpHeight;
@@ -344,6 +347,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            PlayerManager.Manager.enhanced = false;
             PlayerManager.Manager.enhancementDuration = -1;
             PlayerManager.Manager.speed = PlayerManager.Manager.defaultSpeed;
             PlayerManager.Manager.jumpHeight = PlayerManager.Manager.defaultJumpHeight;
@@ -368,5 +372,25 @@ public class PlayerMovement : MonoBehaviour
     public void cannotIgnoreInterruptable()
     {
         PlayerManager.Manager.ignoreUninterruptable = false;
+    }
+
+    public void EnableInvincibility()
+    {
+        PlayerManager.Manager.isInvincible = true;
+    }
+
+    public void DisableInvincibility()
+    {
+        PlayerManager.Manager.isInvincible = false;
+    }
+
+    public void inDialogue()
+    {
+        PlayerManager.Manager.onDialogue = true;
+    }
+
+    public void outDialogue()
+    {
+        PlayerManager.Manager.onDialogue = false;
     }
 }
