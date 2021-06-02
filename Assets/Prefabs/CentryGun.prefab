@@ -205,6 +205,7 @@ MonoBehaviour:
   groundGravity: 900
   gravity: 900
   unInterruptable: 0
+  forceGrounded: 1
 --- !u!50 &6007156330815609421
 Rigidbody2D:
   serializedVersion: 4

@@ -13,9 +13,13 @@ public class FireballDamage : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-           
+            if (PlayerManager.Manager.player == null || PlayerManager.Manager.isInvincible || PlayerManager.Manager.hp <= 0)
+                return;
 
-            if (PlayerManager.Manager.player.transform.position.x > this.gameObject.transform.position.x)
+            if (!PlayerManager.Manager.unInterruptable)
+            {
+
+                if (PlayerManager.Manager.player.transform.position.x > this.gameObject.transform.position.x)
             { // on Rightside
                 staggerDirection = new Vector2(1f * staggerIntensityX, 1f * staggerIntensityY);
                 
@@ -25,8 +29,7 @@ public class FireballDamage : MonoBehaviour
                 staggerDirection = new Vector2(-1f * staggerIntensityX, 1f * staggerIntensityY);
             }
 
-            if (!PlayerManager.Manager.unInterruptable)
-            {
+           
                 PlayerManager.Manager.isStaggered = true;
                 PlayerManager.Manager.staggerDuration = staggerDuration;
                 PlayerManager.Manager.staggerDirection = staggerDirection;

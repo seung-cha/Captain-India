@@ -1273,6 +1273,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0
+    functionName: SetPlayerAnimationState
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 5
+    messageOptions: 0
   - time: 0.033333335
     functionName: canIgnoreInterruptable
     data: 
@@ -1290,7 +1297,7 @@ AnimationClip:
   - time: 1.2166667
     functionName: CreateSoundEffect
     data: 
-    objectReferenceParameter: {fileID: 8300000, guid: eace71cfacb020b41ac99a075d0663ab, type: 3}
+    objectReferenceParameter: {fileID: 8300000, guid: bfa046dfa39880a45bca617f778e588c, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
@@ -1312,7 +1319,7 @@ AnimationClip:
     functionName: DecreaseStamina
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 70
+    floatParameter: 100
     intParameter: 0
     messageOptions: 0
   - time: 1.4166666

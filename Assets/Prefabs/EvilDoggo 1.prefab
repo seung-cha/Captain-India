@@ -266,8 +266,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  groundGravity: 5
-  gravity: 50
+  groundGravity: 2
+  gravity: 2
+  unInterruptable: 0
 --- !u!1 &2588820032659860827
 GameObject:
   m_ObjectHideFlags: 0

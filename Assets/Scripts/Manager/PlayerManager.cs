@@ -73,6 +73,26 @@ public class PlayerManager : MonoBehaviour
     public float cameraShakePercentage;
     public float cameraShakeMaxFrequency;
 
+    public enum playerAnimationState
+    {
+        idle,
+        running,
+        normalZ,
+        downZ,
+        normalX,
+        downX,
+        beam,
+        upper,
+        airPunch,
+        airKick,
+        revive,
+        defeated
+    }
+
+    public playerAnimationState currentPlayerAnimationState;
+    public int reviveCount;
+    public Vector2 revivePos;
+
     private void Awake()
     {
         if (Manager == null)
@@ -106,6 +126,7 @@ public class PlayerManager : MonoBehaviour
 
         unInterruptable = false;
         ignoreUninterruptable = false;
+        reviveCount = 3;
 }
 
     private void Update()

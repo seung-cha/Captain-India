@@ -18,7 +18,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            if(PlayerManager.Manager.isInvincible)
+            if(PlayerManager.Manager.isInvincible || PlayerManager.Manager.hp <=0)
             { return; }
 
             PlayerManager.Manager.hp -= damage;

@@ -420,8 +420,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  groundGravity: 5
-  gravity: 8
+  groundGravity: 2
+  gravity: 2
   unInterruptable: 0
 --- !u!114 &8443762465536225362
 MonoBehaviour:

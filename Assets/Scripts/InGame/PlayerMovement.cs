@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     public float hurtSoundDelay;
     private float HurtSoundDelay;
 
+    public float liftValue;
 
     // Cam
     private void Awake()
@@ -52,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isFacingRight = true;
         wallPos = new Vector2[2];
-        PlayerManager.Manager.gravity = ridBody.gravityScale;
+        // PlayerManager.Manager.gravity = ridBody.gravityScale;
         PlayerManager.Manager.LookForThePlayer();
         lastHealth = PlayerManager.Manager.hp;
        
@@ -305,6 +306,10 @@ public class PlayerMovement : MonoBehaviour
     {
         PlayerManager.Manager.player = null;
     }
+    public void AttachPlayer()
+    {
+        PlayerManager.Manager.player = this.gameObject;
+    }
 
     public void ShakeCamera(float percentage, float frequency, float intensity)
     {
@@ -392,5 +397,30 @@ public class PlayerMovement : MonoBehaviour
     public void outDialogue()
     {
         PlayerManager.Manager.onDialogue = false;
+    }
+
+    public void SetPlayerAnimationState(PlayerManager.playerAnimationState state)
+    {
+        PlayerManager.Manager.currentPlayerAnimationState = state;
+    }
+
+    public void CheckReviveState()
+    {
+        if(PlayerManager.Manager.reviveCount > 0)
+        {
+            PlayerManager.Manager.reviveCount--;
+            PlayerManager.Manager.hp = PlayerManager.Manager.maxHealth;
+            PlayerManager.Manager.stamina = PlayerManager.Manager.maxStamina;
+            this.gameObject.transform.position = PlayerManager.Manager.revivePos;
+            EnablePlayerMove();
+            AttachPlayer();
+            PlayerAnimation anim = GetComponent<PlayerAnimation>();
+            anim.PlayReviveAnimation();
+
+        }
+        else
+        {
+
+        }
     }
 }

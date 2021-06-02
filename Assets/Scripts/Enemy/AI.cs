@@ -60,6 +60,8 @@ public class AI : MonoBehaviour
 
 
     public bool unInterruptable;
+
+    public bool forceGrounded;
     private void Awake()
     {
        
@@ -105,6 +107,8 @@ public class AI : MonoBehaviour
         unInterruptable = false;
     }
 
+    
+
     // Update is called once per frame
     void Update()
     {
@@ -134,6 +138,9 @@ public class AI : MonoBehaviour
     private void LateUpdate()
     {
         Dattack.CoolDown();
+
+        if (forceGrounded)
+            isGrounded = true;
         /*
         if(unInterruptable)
         {
@@ -177,7 +184,7 @@ public class AI : MonoBehaviour
         bool detectedPlayerLeft = Physics2D.OverlapBox(new Vector2(wallPos[0].x - attackBoxOffset.x, wallPos[0].y + attackBoxOffset.y), attackSize, 0f, playerMask);
         bool detectedPlayerRight = Physics2D.OverlapBox(new Vector2(wallPos[1].x + attackBoxOffset.x, wallPos[1].y + attackBoxOffset.y), attackSize, 0f, playerMask);
 
-        if (Dattack.currentDelay <= 0f)
+        if (Dattack.currentDelay <= 0f && isGrounded)
         {
             if (detectedPlayerLeft || detectedPlayerRight)
             {
@@ -247,6 +254,25 @@ public class AI : MonoBehaviour
 
     void Movement()
     {
+        if (!isGrounded)
+        {
+            vel = new Vector2(0, rid.velocity.y);
+
+            if (isStaggered)
+            {
+                vel = staggerDir;
+                staggerDuration -= 1 * Time.deltaTime;
+
+                if (staggerDuration <= 0)
+                {
+                    isStaggered = false;
+                    detectionForceFalse = false;
+                }
+            }
+
+            return;
+        }
+
         if (!isStaggered)
         {
             if (!detectionForceFalse)
@@ -259,24 +285,24 @@ public class AI : MonoBehaviour
 
                         if (targetIsOnLeft && minimumStopDistance >= stopDistance)
                         {
-                            vel = new Vector2(-speed, vel.y);
+                            vel = new Vector2(-speed, rid.velocity.y);
                         }
                         else if (!targetIsOnLeft && minimumStopDistance >= stopDistance)
                         {
-                            vel = new Vector2(speed, vel.y);
+                            vel = new Vector2(speed, rid.velocity.y);
                         }
                         else
-                            vel = new Vector2(0, vel.y);
+                            vel = new Vector2(0, rid.velocity.y);
                     }
                     else
-                        vel = new Vector2(0, vel.y);
+                        vel = new Vector2(0, rid.velocity.y);
                 }
                 else
-                    vel = new Vector2(0, vel.y);
+                    vel = new Vector2(0, rid.velocity.y);
             }
             else
             {
-                vel = new Vector2(0, vel.y);
+                vel = new Vector2(0, rid.velocity.y);
             }
         }
         else

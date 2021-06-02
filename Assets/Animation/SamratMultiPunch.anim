@@ -690,11 +690,18 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.13333334
+  - time: 0
+    functionName: SetPlayerAnimationState
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 4
+    messageOptions: 0
+  - time: 0.016666668
     functionName: CreateSoundEffect
     data: 
-    objectReferenceParameter: {fileID: 8300000, guid: ce866703a1c478d46a2b7977ff901cdd, type: 3}
-    floatParameter: 5
+    objectReferenceParameter: {fileID: 8300000, guid: dea69e9e76b21e54d803a3ce9762b988, type: 3}
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.25
@@ -708,7 +715,7 @@ AnimationClip:
     functionName: DecreaseStamina
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 5
+    floatParameter: 3
     intParameter: 0
     messageOptions: 0
   - time: 0.41666666
@@ -722,7 +729,7 @@ AnimationClip:
     functionName: DecreaseStamina
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 5
+    floatParameter: 3
     intParameter: 0
     messageOptions: 0
   - time: 0.5833333
@@ -736,7 +743,7 @@ AnimationClip:
     functionName: DecreaseStamina
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 5
+    floatParameter: 3
     intParameter: 0
     messageOptions: 0
   - time: 0.76666665
@@ -750,7 +757,7 @@ AnimationClip:
     functionName: DecreaseStamina
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 5
+    floatParameter: 3
     intParameter: 0
     messageOptions: 0
   - time: 0.93333334
@@ -764,7 +771,7 @@ AnimationClip:
     functionName: DecreaseStamina
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 5
+    floatParameter: 3
     intParameter: 0
     messageOptions: 0
   - time: 1.1333333
@@ -778,7 +785,7 @@ AnimationClip:
     functionName: DecreaseStamina
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 5
+    floatParameter: 3
     intParameter: 0
     messageOptions: 0
   - time: 1.25

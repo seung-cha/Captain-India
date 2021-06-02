@@ -42,13 +42,13 @@ public class PlayerAttack : MonoBehaviour
                 if (this.gameObject.transform.position.x < collision.gameObject.transform.position.x)
                 {
                     Vector2 value = new Vector2(1, 1).normalized;
-                    Vector2 staggerDirection = new Vector2(value.x * Intensity, 1);
+                    Vector2 staggerDirection = new Vector2(value.x * Intensity, 1 * playerMovement.liftValue);
                     targetAI.staggerDir = staggerDirection;
                 }
                 else
                 {
                     Vector2 value = new Vector2(1, 1).normalized;
-                    Vector2 staggerDirection = new Vector2(value.x * -Intensity, 1);
+                    Vector2 staggerDirection = new Vector2(value.x * -Intensity, 1 * playerMovement.liftValue);
                     targetAI.staggerDir = staggerDirection;
                 }
 

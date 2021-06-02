@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Manager
   - FieldObject
+  - PlayerHitbox
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Foreground Object
   - Middleground Object
   - Background Ojbect
-  - 
+  - Boss
   - 
   - 
   - 

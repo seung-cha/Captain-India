@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class UIManager : MonoBehaviour
 {
     public Slider hpSlider;
     public Slider staminaSlider;
+    public TextMeshProUGUI countText;
+    public GameObject heart;
     public Image Sprite;
 
 
@@ -24,14 +26,17 @@ public class UIManager : MonoBehaviour
             Sprite.gameObject.SetActive(false);
             hpSlider.gameObject.SetActive(false);
             staminaSlider.gameObject.SetActive(false);
+            heart.gameObject.SetActive(false);
         }
         else
         {
             Sprite.gameObject.SetActive(true);
             hpSlider.gameObject.SetActive(true);
             staminaSlider.gameObject.SetActive(true);
+            heart.gameObject.SetActive(true);
             hpSlider.value = PlayerManager.Manager.hp;
             staminaSlider.value = PlayerManager.Manager.stamina;
+            countText.text = PlayerManager.Manager.reviveCount.ToString();
         }
     }
 }

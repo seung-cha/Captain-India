@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    Animator animator;
+   public Animator animator;
     Rigidbody2D rid;
 
-    
+
     const string IDLE = "SamratIdleAnim";
     const string WPUNCH = "SamratNormalPunch";
     const string HPUNCH = "SamratMultiPunch";
@@ -16,29 +16,44 @@ public class PlayerAnimation : MonoBehaviour
     const string BEAM = "SamratKuganBeam";
     const string DIE = "SamratDie";
     const string RUN = "SamratRunAnim";
+    const string UPPER = "SamratUpperCut";
+    const string AKICK = "SamratAirKick";
+    const string APUNCH = "SamratAirPunch";
+    const string REVIVE = "SamratRevive";
 
     public float heavyPunchRequiretedStamina;
+    public float upperRequiredStamina;
     public float powerUpRequiredStamina;
     public float kuganBeamRequiredStamina;
+
+ 
     void Start()
     {
         animator = GetComponent<Animator>();
         rid = GetComponent<Rigidbody2D>();
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(PlayerManager.Manager.hp <= 0)
+        if(PlayerManager.Manager.currentPlayerAnimationState == PlayerManager.playerAnimationState.revive)
+        {
+            return;
+        }
+
+        if (PlayerManager.Manager.hp <= 0)
         {
             animator.Play(DIE);
         }
         if (PlayerManager.Manager.onDialogue || PlayerManager.Manager.isStaggered)
-        { animator.Play(IDLE);  return; }
+        { animator.Play(IDLE); return; }
+
+
         // Ground check
 
-
-        if(PlayerManager.Manager.isGrounded)
+        if (PlayerManager.Manager.isGrounded)
         {
             // if able to move
             if (PlayerManager.Manager.canMove)
@@ -50,47 +65,122 @@ public class PlayerAnimation : MonoBehaviour
 
             }
 
+
             // Attack Part
+            // Prevent downX from being used repeatedly
+            // allow moves to be used repeteadly only when the player is not using downX
+            // Take away the player's stamina by 5 when translate from strong move to weak move 
 
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (PlayerManager.Manager.currentPlayerAnimationState != PlayerManager.playerAnimationState.downX && PlayerManager.Manager.currentPlayerAnimationState != PlayerManager.playerAnimationState.beam)
             {
-                // 2 Attacks
-                if (Input.GetKeyDown(KeyCode.Z))
+                if (Input.GetKey(KeyCode.DownArrow))
                 {
-                    animator.Play(KICK);
-                }
+                    // Down attacks go here
 
-                if(Input.GetKeyDown(KeyCode.X) && PlayerManager.Manager.stamina >= powerUpRequiredStamina)
-                {
-                    animator.Play(POWERUP);
-                }
-
-            }
-            else
-            {
-                // 5 Attacks
-                if (Input.GetKeyDown(KeyCode.Z))
-                {
-                    animator.Play(WPUNCH);
-                }
-
-                if(Input.GetKeyDown(KeyCode.X) && PlayerManager.Manager.stamina >= heavyPunchRequiretedStamina)
-                {
-                    animator.Play(HPUNCH);
-                }
-
-                if (PlayerManager.Manager.awakened)
-                {
-                    if (Input.GetKeyDown(KeyCode.C) && PlayerManager.Manager.stamina >= kuganBeamRequiredStamina)
+                    if (PlayerManager.Manager.currentPlayerAnimationState == PlayerManager.playerAnimationState.normalX)
                     {
-                        animator.Play(BEAM);
+                        // transition from heavy to weak
+                        if (PlayerManager.Manager.stamina >= 5)
+                        {
+                            if (Input.GetKeyDown(KeyCode.Z))
+                            {
+                                PlayerManager.Manager.stamina -= 5;
+                                animator.Play(KICK);
+                            }
+                            else if (Input.GetKeyDown(KeyCode.C) && PlayerManager.Manager.stamina >= powerUpRequiredStamina)
+                            {
+                                PlayerManager.Manager.stamina -= 5;
+                                animator.Play(POWERUP);
+                            }
+                            else if (Input.GetKeyDown(KeyCode.X) && PlayerManager.Manager.stamina >= upperRequiredStamina)
+                            {
+                                PlayerManager.Manager.stamina -= 5;
+                                animator.Play(UPPER);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (Input.GetKeyDown(KeyCode.Z))
+                        {
+                            animator.Play(KICK);
+                        }
+                        else if (Input.GetKeyDown(KeyCode.C) && PlayerManager.Manager.stamina >= powerUpRequiredStamina)
+                        {
+                            animator.Play(POWERUP);
+                        }
+                        else if (Input.GetKeyDown(KeyCode.X) && PlayerManager.Manager.stamina >= upperRequiredStamina)
+                        {
+                            animator.Play(UPPER);
+                        }
+                    }
+                }
+                else
+                {
+                    // normal attacks go here
+                    if (PlayerManager.Manager.currentPlayerAnimationState == PlayerManager.playerAnimationState.normalX)
+                    {
+                        // transition from heavy to weak
+                        if (PlayerManager.Manager.stamina >= 5)
+                        {
+                            if (Input.GetKeyDown(KeyCode.Z))
+                            {
+                                PlayerManager.Manager.stamina -= 5;
+                                animator.Play(WPUNCH);
+                            }
+                            else if (Input.GetKeyDown(KeyCode.C) && PlayerManager.Manager.stamina >= kuganBeamRequiredStamina)
+                            {
+                                PlayerManager.Manager.stamina -= 5 + kuganBeamRequiredStamina;
+                                animator.Play(BEAM);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (Input.GetKeyDown(KeyCode.Z))
+                        {
+                            animator.Play(WPUNCH);
+                        }
+                        else if (Input.GetKeyDown(KeyCode.X) && PlayerManager.Manager.stamina >= heavyPunchRequiretedStamina)
+                        {
+                            animator.Play(HPUNCH);
+                        }
+                        else if (Input.GetKeyDown(KeyCode.C) && PlayerManager.Manager.stamina >= kuganBeamRequiredStamina)
+                        {
+                            PlayerManager.Manager.stamina -= kuganBeamRequiredStamina;
+                            animator.Play(BEAM);
+                        }
                     }
                 }
             }
-           
+        }
+        else // AirMove
+        {
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                animator.Play(APUNCH);
+            }
+            else if (Input.GetKeyDown(KeyCode.X))
+            {
+                animator.Play(AKICK);
+            }
+
+           if(PlayerManager.Manager.currentPlayerAnimationState == PlayerManager.playerAnimationState.airKick || PlayerManager.Manager.currentPlayerAnimationState == PlayerManager.playerAnimationState.airPunch)
+            {
+                if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
+                    animator.Play(IDLE);
+            }
 
 
 
         }
+    }
+
+
+    public void PlayReviveAnimation()
+    {
+        animator.Play(REVIVE);
+        PlayerManager.Manager.currentPlayerAnimationState = PlayerManager.playerAnimationState.revive;
+        Debug.Log("Revive");
     }
 }

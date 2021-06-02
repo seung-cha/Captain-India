@@ -1,0 +1,2 @@
+airkicku.png,600,600,3
+airKick.png,600,600,3
