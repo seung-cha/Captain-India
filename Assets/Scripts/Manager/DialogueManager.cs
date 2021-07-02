@@ -110,13 +110,7 @@ public class DialogueManager : MonoBehaviour
     public void SetDialogue()
     {
 
-
         stopCoroutine = false;
-        /*
-        bool canProceed;
-        canProceed = dialogue.Count -1 == 0 ? false : true;
-        nextButton.interactable = canProceed;
-        */
 
         PlayerManager.Manager.canMove = false;
         PlayerManager.Manager.onDialogue = true;

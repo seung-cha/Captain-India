@@ -210,23 +210,11 @@ public class AI : MonoBehaviour
 
     void DetectPlayer()
     {
-      
-
         if (Ddetection.currentDelay <= 0f)
             Ddetection.currentDelay = 0f;
 
-      
-       
-
-        // Debug.Log("Distance is " + Vector2.Distance(this.gameObject.transform.position, player.transform.position));
         if (!detectionForceFalse)
-        {
-           // RaycastHit2D[] hit = Physics2D.RaycastAll(boxCol.bounds.center, PlayerManager.Manager.transform.position, Mathf.Infinity, playerAndThisObject);
-           // foreach(RaycastHit2D hits in hit)
-           // {
-           //     Debug.Log(hits.collider.tag);
-           // ra }
-           
+        {  
             if (playerDistance <= distance && heightDifference <= chaseHeightLimit)
             {
               

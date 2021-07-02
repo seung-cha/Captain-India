@@ -25,6 +25,8 @@ public class Cheats : MonoBehaviour
     public TextMeshProUGUI jumpHackText;
     public TextMeshProUGUI healthHackText;
     public TextMeshProUGUI staminaHackText;
+
+    public GameObject deathPanel;
     void Start()
     {
         defaultDamage = 1;
@@ -117,6 +119,7 @@ public class Cheats : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex != 0)
         {
+            deathPanel.SetActive(false);
             LoadingScreenManager.Manager.sceneIndex = 0;
             SceneManager.LoadScene(1);
 
@@ -141,5 +144,7 @@ public class Cheats : MonoBehaviour
     {
         PlayerManager.Manager.hp = PlayerManager.Manager.maxHealth;
         PlayerManager.Manager.stamina = PlayerManager.Manager.maxStamina;
+        PlayerManager.Manager.enhancementDuration = 0;
+        PlayerManager.Manager.reviveCount = 3;
     }
 }

@@ -120,8 +120,8 @@ public class PlayerManager : MonoBehaviour
      defaultJumpCount = jumpCount;
      defaultJumpHeight = jumpHeight;
         defaultDamageMultiplier = 1;
-        enhancedJumpHeight = defaultJumpHeight * 1.8f;
-        enhancedSpeed = defaultSpeed * 1.8f;
+        enhancedJumpHeight = defaultJumpHeight * 1.2f;
+        enhancedSpeed = defaultSpeed * 1.5f;
         enhancedDamageMultiplier = 2;
 
         unInterruptable = false;

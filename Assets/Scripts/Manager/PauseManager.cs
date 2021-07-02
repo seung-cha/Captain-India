@@ -10,6 +10,7 @@ public class PauseManager : MonoBehaviour
     public bool isPaused;
     public GameObject pauseMenu;
     public List<int> notGameScenes;
+    public GameObject deathPanel;
     void Start()
     {
         if (Manager == null)

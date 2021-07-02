@@ -420,7 +420,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-
+            PauseManager.Manager.deathPanel.SetActive(true);
         }
     }
 }

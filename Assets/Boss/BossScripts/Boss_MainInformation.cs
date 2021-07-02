@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boss_MainInformation : MonoBehaviour
 {
-    // Start is called before the first frame update
+    int hp; 
     void Start()
     {
         
