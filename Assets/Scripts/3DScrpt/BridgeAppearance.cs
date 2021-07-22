@@ -78,7 +78,7 @@ public class BridgeAppearance : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-         Debug.Log(currentTime);
+         Debug.Log(currentTime * 60);
          Debug.Log("Current CheckPoint : " + currentCheckPoint);
       
         anim.Play(clipName, 0, currentTime);

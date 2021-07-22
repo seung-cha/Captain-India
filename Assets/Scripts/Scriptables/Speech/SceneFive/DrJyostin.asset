@@ -15,48 +15,41 @@ MonoBehaviour:
   texts:
   - image: {fileID: 2800000, guid: 00e8ecda20f28c647a1b3b58e60f4184, type: 3}
     speaker: Captain India
-    text: Hmmmm...
-  - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
-    speaker: Captain India
-    text: Where am I
-  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
-    speaker: Naveein
-    text: I have no idea.
-  - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
-    speaker: Captain India
-    text: . . .
-  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
-    speaker: Naveein
-    text: But, Master Rani is still on the lower floor. We need to go down.
-  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
-    speaker: Naveein
-    text: Perhaps find a way to. . .
-  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
-    speaker: ???
-    text: Ah! Captain India!!
-  - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
-    speaker: Captain India
-    text: ???
-  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
-    speaker: Dr. Jyostin
-    text: Welcome to the laboratory Captain India. I am Dr. Jyostin. And this is
-      where I conduct experiments.
-  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
-    speaker: Dr. Jyostin
-    text: And I was about to shift the dimension of the next room.
+    text: I don't see a way to go down in this room.
   - image: {fileID: 2800000, guid: 00e8ecda20f28c647a1b3b58e60f4184, type: 3}
     speaker: Captain India
-    text: You.. what?
-  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
-    speaker: Dr. Jyostin
-    text: Enjoy, Captain India!
-  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
-    speaker: Dr. Jyostin
-    text: 'By the way, you better hurry. Because I''m getting tired of waiting you. '
-  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
-    speaker: Dr. Jyostin
-    text: You know what I'm going to do to him right? So HURRY! HAHAHAHAHAHA
-  - image: {fileID: 2800000, guid: 28166731588bb7640989566eb221fdef, type: 3}
+    text: I don't see a way to go down in this room.
+  - image: {fileID: 2800000, guid: 00e8ecda20f28c647a1b3b58e60f4184, type: 3}
     speaker: Captain India
-    text: :O
-  value: 000000000000000001000000000000000100000001000000010000000000000001000000010000000000000001000000010000000100000000000000
+    text: Perhaps, I need to find other way to . . .
+  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
+    speaker: ???
+    text: Ah! Captain India!
+  - image: {fileID: 2800000, guid: 00e8ecda20f28c647a1b3b58e60f4184, type: 3}
+    speaker: Captain India
+    text: ???
+  - image: {fileID: 2800000, guid: 48c12de59fd06974187da7019d4853a7, type: 3}
+    speaker: Dr. Jyostin
+    text: Welcome to my facility. I am Dr. Jyostin.
+  - image: {fileID: 2800000, guid: 48c12de59fd06974187da7019d4853a7, type: 3}
+    speaker: Dr. Jyostin
+    text: And I was about to shift the dimension of this room.
+  - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
+    speaker: Captain India
+    text: You.. what?
+  - image: {fileID: 2800000, guid: 48c12de59fd06974187da7019d4853a7, type: 3}
+    speaker: Dr. Jyostin
+    text: It's all done! HAHAHA
+  - image: {fileID: 2800000, guid: 48c12de59fd06974187da7019d4853a7, type: 3}
+    speaker: Dr. Jyostin
+    text: 'By the way, you need to hurry!
+
+      because I am getting tired of waiting
+      you!'
+  - image: {fileID: 2800000, guid: 48c12de59fd06974187da7019d4853a7, type: 3}
+    speaker: Dr. Jyostin
+    text: You know what I'm going to do to Master Rani, right? HAHAHA!
+  - image: {fileID: 2800000, guid: 00e8ecda20f28c647a1b3b58e60f4184, type: 3}
+    speaker: Captain India
+    text: I need to go, now.
+  value: 000000000000000000000000010000000000000001000000010000000000000001000000010000000100000000000000
