@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e1db8cea0bc824ab96dd5f64734952, type: 3}
+  m_Name: speec
+  m_EditorClassIdentifier: 
+  texts:
+  - image: {fileID: 2800000, guid: 48c12de59fd06974187da7019d4853a7, type: 3}
+    speaker: Dr. Jyostin
+    text: No! My robot! NOOOOO!!!
+  - image: {fileID: 2800000, guid: 48c12de59fd06974187da7019d4853a7, type: 3}
+    speaker: Dr. Jyostin
+    text: Don't you think everything is over, Captain India! I will eventually take
+      over the world!
+  - image: {fileID: 2800000, guid: 00e8ecda20f28c647a1b3b58e60f4184, type: 3}
+    speaker: Captain India
+    text: It's over... for now...
+  - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
+    speaker: Captain India
+    text: I need to find Master Rani.
+  - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
+    speaker: Captain India
+    text: Master Rani!
+  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
+    speaker: 
+    text: ...
+  - image: {fileID: 2800000, guid: 36f25420a38d0ab49ae3ca12d2a6ff70, type: 3}
+    speaker: Master Rani
+    text: Captain India, thank you for saving me.
+  - image: {fileID: 2800000, guid: 36f25420a38d0ab49ae3ca12d2a6ff70, type: 3}
+    speaker: Master Rani
+    text: Now, I need to tell you this.
+  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
+    speaker: 
+    text: '[Master Rani tells Captain India about what he discovered recently and
+      the stones.]'
+  - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
+    speaker: Captain India
+    text: Is that.. real?
+  - image: {fileID: 2800000, guid: 672dd74a51013464784bb8d74ae6fbee, type: 3}
+    speaker: Master Rani
+    text: Yes, it is.
+  - image: {fileID: 2800000, guid: 672dd74a51013464784bb8d74ae6fbee, type: 3}
+    speaker: Master Rani
+    text: I don't know when the time will come, but it is definitely coming.
+  - image: {fileID: 2800000, guid: 672dd74a51013464784bb8d74ae6fbee, type: 3}
+    speaker: Master Rani
+    text: We need to prepare for unknown threats.
+  - image: {fileID: 2800000, guid: 672dd74a51013464784bb8d74ae6fbee, type: 3}
+    speaker: Master Rani
+    text: Captain India, I will head back to the HQ and let everyone know about this.
+  value: 0100000001000000000000000000000000000000000000000100000001000000000000000000000001000000010000000100000001000000

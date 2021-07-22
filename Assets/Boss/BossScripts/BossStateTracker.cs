@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossStateTracker : MonoBehaviour
 {
@@ -427,9 +428,13 @@ public class BossStateTracker : MonoBehaviour
             level =1;
             bossAnimator.SetFloat("SpeedValue", 1.2f);
         }
-        else if (currentBossHealth <= 50)
+        else if (currentBossHealth <= 50 && currentBossHealth > 0)
         {
             level = 2;
+        }
+        else if(currentBossHealth <= 0)
+        {
+            SceneManager.LoadScene(16);
         }
     }
 
