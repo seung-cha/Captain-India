@@ -2427,4 +2427,32 @@ AnimationClip:
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 42c7640e252d94a40b5dc628eeb77f7b, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.6666666
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 1e1ca2b982d7938488f3b5a78da487cb, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 5
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 8528544b9ffc3c041b55bab5dc162f30, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 5.116667
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: e3ea8f62f83820748811ea5533d68e8d, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

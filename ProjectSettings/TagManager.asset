@@ -8,6 +8,7 @@ TagManager:
   - Manager
   - FieldObject
   - PlayerHitbox
+  - Rocket
   layers:
   - Default
   - TransparentFX

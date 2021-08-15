@@ -3945,11 +3945,67 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 3.0833333
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: e68f9a0c46bcc544b9934974270f86ae, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 3.4333334
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 1527580ea03a42a49808a21c80e1ddf5, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 4.5
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: e68f9a0c46bcc544b9934974270f86ae, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 5.8166666
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 56697f59121efed448da1e5b94887b17, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 6.266667
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: d67d6f976232f27458cf836ea633d8e7, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 6.516667
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: d67d6f976232f27458cf836ea633d8e7, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 6.7
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: d67d6f976232f27458cf836ea633d8e7, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 6.733333
     functionName: CreateHomingRocket
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 17
+    intParameter: 0
+    messageOptions: 0
+  - time: 6.95
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: d67d6f976232f27458cf836ea633d8e7, type: 3}
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 7.05
@@ -3966,10 +4022,31 @@ AnimationClip:
     floatParameter: 26
     intParameter: 0
     messageOptions: 0
+  - time: 7.483333
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: e68f9a0c46bcc544b9934974270f86ae, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 7.7833333
     functionName: CreateHomingRocket
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 26
+    intParameter: 0
+    messageOptions: 0
+  - time: 7.983333
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 42c7640e252d94a40b5dc628eeb77f7b, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 9.216666
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 1e1ca2b982d7938488f3b5a78da487cb, type: 3}
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0

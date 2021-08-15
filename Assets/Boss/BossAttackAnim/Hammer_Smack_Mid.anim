@@ -1208,4 +1208,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 3
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: e68f9a0c46bcc544b9934974270f86ae, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 4.6833334
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 4d0bb49add63096429748916695fdbca, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

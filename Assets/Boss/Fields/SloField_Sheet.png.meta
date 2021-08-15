@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: f08fb148bb3d59d4fa64ac935ca9b378
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7092260902692584891
+    second: SloField_Sheet_0
+  - first:
+      213: 5769768994260789610
+    second: SloField_Sheet_1
+  - first:
+      213: -5859779444628413400
+    second: SloField_Sheet_2
+  - first:
+      213: 8575434782036662312
+    second: SloField_Sheet_3
+  - first:
+      213: 7285270851620988694
+    second: SloField_Sheet_4
+  - first:
+      213: -7224730726110100699
+    second: SloField_Sheet_5
+  - first:
+      213: -7077265455982772449
+    second: SloField_Sheet_6
+  - first:
+      213: 6107760280645092795
+    second: SloField_Sheet_7
+  - first:
+      213: -3154378564448183152
+    second: SloField_Sheet_8
+  - first:
+      213: -2120965145091942846
+    second: SloField_Sheet_9
+  - first:
+      213: 324942815833881916
+    second: SloField_Sheet_10
+  - first:
+      213: -5303578161566860590
+    second: SloField_Sheet_11
+  - first:
+      213: 5796001703264552983
+    second: SloField_Sheet_12
+  - first:
+      213: -2731795734431658157
+    second: SloField_Sheet_13
+  - first:
+      213: -2228417517854268009
+    second: SloField_Sheet_14
+  - first:
+      213: -5037507533463939903
+    second: SloField_Sheet_15
+  - first:
+      213: 2573787172271890666
+    second: SloField_Sheet_16
+  - first:
+      213: 5644217041240560153
+    second: SloField_Sheet_17
+  - first:
+      213: 8729947194804495165
+    second: SloField_Sheet_18
+  - first:
+      213: 1345578564253932925
+    second: SloField_Sheet_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SloField_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7112
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5420e90194a339d90800000000000000
+      internalID: -7092260902692584891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 7112
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a692afaa456521050800000000000000
+      internalID: 5769768994260789610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 7112
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824a9cc34a1edaea0800000000000000
+      internalID: -5859779444628413400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 7112
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82813d9ef70120770800000000000000
+      internalID: 8575434782036662312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6032
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61760639d3b7a1560800000000000000
+      internalID: 7285270851620988694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 6032
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5238b50dea99cbb90800000000000000
+      internalID: -7224730726110100699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 6032
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ff003909088cd90800000000000000
+      internalID: -7077265455982772449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 6032
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5471d6d9f13c450800000000000000
+      internalID: 6107760280645092795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4952
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c95f288656934d0800000000000000
+      internalID: -3154378564448183152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4952
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2465fc91071d092e0800000000000000
+      internalID: -2120965145091942846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 4952
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3df716f4cd628400800000000000000
+      internalID: 324942815833881916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 4952
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dab949f2c7e566b0800000000000000
+      internalID: -5303578161566860590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3872
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71884a037d88f6050800000000000000
+      internalID: 5796001703264552983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3872
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f0642d046b61ad0800000000000000
+      internalID: -2731795734431658157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3872
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795e90df2121311e0800000000000000
+      internalID: -2228417517854268009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 3872
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c41782969d271ab0800000000000000
+      internalID: -5037507533463939903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2792
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae029b2fbcde7b320800000000000000
+      internalID: 2573787172271890666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2792
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9129952ae79445e40800000000000000
+      internalID: 5644217041240560153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2792
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d336d3e68b0072970800000000000000
+      internalID: 8729947194804495165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloField_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2792
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7d5cb333947ca210800000000000000
+      internalID: 1345578564253932925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

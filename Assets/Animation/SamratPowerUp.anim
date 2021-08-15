@@ -1280,6 +1280,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 5
     messageOptions: 0
+  - time: 0.016666668
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 80274c0470bf04c43ba4431c2a4b1d7e, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.033333335
     functionName: canIgnoreInterruptable
     data: 
@@ -1291,13 +1298,6 @@ AnimationClip:
     functionName: CreateSoundEffect
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: 93b33a9473149e747b64237fdba49b65, type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1.2166667
-    functionName: CreateSoundEffect
-    data: 
-    objectReferenceParameter: {fileID: 8300000, guid: bfa046dfa39880a45bca617f778e588c, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

@@ -1114,11 +1114,39 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0.41666666
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 56697f59121efed448da1e5b94887b17, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6166667
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: d67d6f976232f27458cf836ea633d8e7, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.81666666
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: d67d6f976232f27458cf836ea633d8e7, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.95
     functionName: CreateHomingRocket
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 12
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.1666666
+    functionName: CreateSoundEffect
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: f9176a0b354ab4d40ba3a7a142b3b975, type: 3}
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.5

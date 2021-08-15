@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: 147f928b75f27d54a8ba1e6f4514b2de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5283134312838934981
+    second: SumField_Sheet_0
+  - first:
+      213: -2282883534819530742
+    second: SumField_Sheet_1
+  - first:
+      213: -8508151400598137636
+    second: SumField_Sheet_2
+  - first:
+      213: -1362151736434480904
+    second: SumField_Sheet_3
+  - first:
+      213: -7478518713639955596
+    second: SumField_Sheet_4
+  - first:
+      213: 4667869219410705799
+    second: SumField_Sheet_5
+  - first:
+      213: 4405141887146851729
+    second: SumField_Sheet_6
+  - first:
+      213: 8281735728477909416
+    second: SumField_Sheet_7
+  - first:
+      213: 2220454942831417672
+    second: SumField_Sheet_8
+  - first:
+      213: 274902059368382637
+    second: SumField_Sheet_9
+  - first:
+      213: 2718395095244311459
+    second: SumField_Sheet_10
+  - first:
+      213: 8798632435371608144
+    second: SumField_Sheet_11
+  - first:
+      213: 8954514014678286133
+    second: SumField_Sheet_12
+  - first:
+      213: -5972041035668290157
+    second: SumField_Sheet_13
+  - first:
+      213: 1681245578939190909
+    second: SumField_Sheet_14
+  - first:
+      213: -3592855996496222848
+    second: SumField_Sheet_15
+  - first:
+      213: -6466196185912552929
+    second: SumField_Sheet_16
+  - first:
+      213: 4305217756957945164
+    second: SumField_Sheet_17
+  - first:
+      213: 5677876261027810982
+    second: SumField_Sheet_18
+  - first:
+      213: -3600052109483359241
+    second: SumField_Sheet_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SumField_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7112
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c131719aa6715940800000000000000
+      internalID: 5283134312838934981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 7112
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a086e7335819150e0800000000000000
+      internalID: -2282883534819530742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 7112
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd41b181169fce980800000000000000
+      internalID: -8508151400598137636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 7112
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f824a3763aa81de0800000000000000
+      internalID: -1362151736434480904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6032
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47311635ad6f63890800000000000000
+      internalID: -7478518713639955596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 6032
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d74f8d25a97c040800000000000000
+      internalID: 4667869219410705799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 6032
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19df498f435322d30800000000000000
+      internalID: 4405141887146851729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 6032
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1369b34c2aee270800000000000000
+      internalID: 8281735728477909416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4952
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8491a3b8104a0de10800000000000000
+      internalID: 2220454942831417672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4952
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da00dac67f5a0d300800000000000000
+      internalID: 274902059368382637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 4952
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab833bbfeda9b520800000000000000
+      internalID: 2718395095244311459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 4952
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0580e8335950b1a70800000000000000
+      internalID: 8798632435371608144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3872
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ff725ad03d44c70800000000000000
+      internalID: 8954514014678286133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3872
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3958fecb15c0f1da0800000000000000
+      internalID: -5972041035668290157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3872
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ecdd842fbf45710800000000000000
+      internalID: 1681245578939190909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 3872
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 085e5b7c18c932ec0800000000000000
+      internalID: -3592855996496222848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2792
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1252ba04d47346a0800000000000000
+      internalID: -6466196185912552929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2792
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4dae2c6db43fbb30800000000000000
+      internalID: 4305217756957945164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2792
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae8f21706edbce40800000000000000
+      internalID: 5677876261027810982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SumField_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2792
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f349592eab0a0ec0800000000000000
+      internalID: -3600052109483359241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

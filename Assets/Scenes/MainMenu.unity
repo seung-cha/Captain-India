@@ -5675,24 +5675,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8285730863709376369, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
       propertyPath: hurtSoundClips.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8285730863709376369, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
       propertyPath: hurtSoundClips.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 21327977067edb94bacf28d49417b829, type: 3}
+      objectReference: {fileID: 8300000, guid: 4c88e0ca509ecac4da888824085547a0, type: 3}
     - target: {fileID: 8285730863709376369, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
       propertyPath: hurtSoundClips.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: e71c9874d7170e6409864464b77e46fa, type: 3}
+      objectReference: {fileID: 8300000, guid: 1832b8e73e5f9d14390a346226fa16d0, type: 3}
     - target: {fileID: 8285730863709376369, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
       propertyPath: hurtSoundClips.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: c3909ce6ca8d408428b227311f0e12b1, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8285730863709376369, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
       propertyPath: hurtSoundClips.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: 2c798545462a4f7448bac3616e3ad483, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8285730863709376370, guid: b173cef3a2950214eb6cd4c086f129c8, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -6603,7 +6603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
-  sceneNumber: 11
+  sceneNumber: 8
   toLoadingScreen: 0
 --- !u!114 &1736842138
 MonoBehaviour:
