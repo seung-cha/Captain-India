@@ -249,6 +249,11 @@ public class PlayerMovement : MonoBehaviour
         {
             PlayerManager.Manager.jumpCount = PlayerManager.Manager.maxJumpCount;
             PlayerManager.Manager.wallJumpCount = PlayerManager.Manager.maxWallJumpCount;
+            ridBody.gravityScale = -PlayerManager.Manager.gravity;
+        }
+        else
+        {
+            ridBody.gravityScale = PlayerManager.Manager.gravity;
         }
 
 

@@ -715,7 +715,7 @@ AnimationClip:
     functionName: DecreaseStamina
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 3
+    floatParameter: 7
     intParameter: 0
     messageOptions: 0
   - time: 0.41666666
@@ -729,7 +729,7 @@ AnimationClip:
     functionName: DecreaseStamina
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 3
+    floatParameter: 7
     intParameter: 0
     messageOptions: 0
   - time: 0.5833333
@@ -743,7 +743,7 @@ AnimationClip:
     functionName: DecreaseStamina
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 3
+    floatParameter: 7
     intParameter: 0
     messageOptions: 0
   - time: 0.76666665
@@ -757,7 +757,7 @@ AnimationClip:
     functionName: DecreaseStamina
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 3
+    floatParameter: 7
     intParameter: 0
     messageOptions: 0
   - time: 0.93333334
@@ -771,7 +771,7 @@ AnimationClip:
     functionName: DecreaseStamina
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 3
+    floatParameter: 7
     intParameter: 0
     messageOptions: 0
   - time: 1.1333333
@@ -785,7 +785,7 @@ AnimationClip:
     functionName: DecreaseStamina
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 3
+    floatParameter: 7
     intParameter: 0
     messageOptions: 0
   - time: 1.25
