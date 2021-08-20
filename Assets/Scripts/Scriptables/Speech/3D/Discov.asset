@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81e1db8cea0bc824ab96dd5f64734952, type: 3}
-  m_Name: 1_doubleJump
+  m_Name: Discov
   m_EditorClassIdentifier: 
   texts:
-  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
-    speaker: 
-    text: '[A giant box is on the way]'
   - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
     speaker: Captain India
-    text: This one is just too huge to double jump over.
+    text: Dr. Jyostin was a scientist of DOTS?
   - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
     speaker: Captain India
-    text: I will need to wall jump over it.
+    text: and that UFO... that's the UFO I defeated 3 years ago.
+  - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
+    speaker: Captain India
+    text: I think this dimension is showing the past. Let's move.
   value: 000000000000000000000000

@@ -1262,12 +1262,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 11400000, guid: d6539bebb577eba44b36cba33e2cea31, type: 2}
   - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 11400000, guid: a2d6a23ff435ccb48871f4b915bc3cd5, type: 2}
-  - {fileID: 11400000, guid: cddccb2ddc6686e41a0faa961123d6a0, type: 2}
-  - {fileID: 11400000, guid: ecf26eaa5e2f5324294cac22a9e55045, type: 2}
-  - {fileID: 11400000, guid: dff6bdcd49c460247aa586856397c906, type: 2}
-  - {fileID: 0}
 --- !u!61 &778594099
 BoxCollider2D:
   m_ObjectHideFlags: 0

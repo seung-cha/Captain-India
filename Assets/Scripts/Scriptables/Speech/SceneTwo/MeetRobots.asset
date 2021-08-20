@@ -21,26 +21,9 @@ MonoBehaviour:
     text: 'Why are there robots with weapons? '
   - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
     speaker: Captain India
-    text: What is going on here. This must be relevant to what Master Rani tries
-      to tell me.
+    text: What is going on?. This must be relevant to what Master Rani tries to tell
+      me.
   - image: {fileID: 2800000, guid: 00e8ecda20f28c647a1b3b58e60f4184, type: 3}
     speaker: Captain India
     text: I need to hurry and defeat those robots.
-  - image: {fileID: 2800000, guid: 00e8ecda20f28c647a1b3b58e60f4184, type: 3}
-    speaker: Captain India
-    text: Let's think about what I can do to defeat them.
-  - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
-    speaker: Captain India
-    text: I can perform [Three Jab]. It'll do some damage to them.
-  - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
-    speaker: Captain India
-    text: "If they come too close, I can push them by doing [Kick]. \n[Multiple Punch]
-      will do a significant damage."
-  - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
-    speaker: Captain India
-    text: Or, I can also perform [Awakening] to temporarily enhance my abilities
-      too.
-  - image: {fileID: 2800000, guid: 00e8ecda20f28c647a1b3b58e60f4184, type: 3}
-    speaker: Captain India
-    text: Ok, Let's hurry and meet Master Rani!
-  value: 000000000000000000000000000000000000000000000000000000000000000000000000
+  value: 00000000000000000000000000000000

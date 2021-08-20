@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81e1db8cea0bc824ab96dd5f64734952, type: 3}
-  m_Name: 1_Start
+  m_Name: buttons
   m_EditorClassIdentifier: 
   texts:
+  - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
+    speaker: Captain India
+    text: I will definitely need to do something with these buttons on the ground.
   - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
     speaker: 
-    text: '[Phone is ringing]'
-  - image: {fileID: 2800000, guid: 672dd74a51013464784bb8d74ae6fbee, type: 3}
-    speaker: Master Rani
-    text: Captain India! This is Master Rani. I have something to tell you right
-      now. Meet me at the HQ right now!
-  - image: {fileID: 2800000, guid: 672dd74a51013464784bb8d74ae6fbee, type: 3}
-    speaker: Master Rani
-    text: I cannot tell you what it is right now. You must hurry!
+    text: '[Each button lights up/off different parts of the stone.]'
   - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
     speaker: 
-    text: '[Phone hung up]'
-  value: 00000000010000000100000000000000
+    text: '[Make the stone fully light in order to proceed.]'
+  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
+    speaker: 
+    text: '[NOTE: You can enable Infinite Jump and jump over the obstacle.]'
+  value: 000000000000000000000000

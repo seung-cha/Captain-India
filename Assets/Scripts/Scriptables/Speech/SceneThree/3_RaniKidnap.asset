@@ -30,10 +30,10 @@ MonoBehaviour:
     text: 'huh??? '
   - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
     speaker: Naveein
-    text: I am Naveein. I can telepathize people and communicate with them through
+    text: I am Naveein. I can telepathise people and communicate with them through
       their mind
   - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
     speaker: Naveein
-    text: Let's make this conversation short. I know you wanna rescue Master Rani.
+    text: Let's make this conversation short. I know you want to rescue Master Rani.
       I'll help you. So let's go!
   value: 01000000000000000000000001000000000000000100000001000000

@@ -8,10 +8,12 @@ public class AdjustSpeed : MonoBehaviour
     public float rocketEffectSpeed;
     public float rocketMinSpeed;
 
+    private bool influenced;
     private Dictionary<GameObject, float> rockets;
     void Start()
     {
         rockets = new Dictionary<GameObject, float>();
+        influenced = false;
     }
 
     // Update is called once per frame
@@ -25,6 +27,7 @@ public class AdjustSpeed : MonoBehaviour
         if(collision.tag == "Player")
         {
             PlayerManager.Manager.defaultSpeed += playerEffectSpeed;
+            influenced = true;
         }
 
         if(collision.tag == "Rocket")
@@ -48,6 +51,7 @@ public class AdjustSpeed : MonoBehaviour
         if (collision.tag == "Player")
         {
             PlayerManager.Manager.defaultSpeed -= playerEffectSpeed;
+            influenced = false;
         }
 
         if (collision.tag == "Rocket")
@@ -68,5 +72,9 @@ public class AdjustSpeed : MonoBehaviour
             Rocket_Homing rocket = pair.Key.gameObject.GetComponent<Rocket_Homing>();
             rocket.speed = pair.Value;
         }
+
+        if(influenced)
+            PlayerManager.Manager.defaultSpeed -= playerEffectSpeed;
+
     }
 }
