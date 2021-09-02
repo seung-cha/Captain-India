@@ -37,7 +37,7 @@ public class Rocket_Homing : MonoBehaviour
     {
         if(collision.tag == "Player" || collision.tag == "FieldObject")
         {
-            if (collision.tag == "Player")
+            if (collision.tag == "Player" && !PlayerManager.Manager.isInvincible)
                 PlayerManager.Manager.hp -= 15;
 
             GameObject obj = Instantiate(blastEffect);

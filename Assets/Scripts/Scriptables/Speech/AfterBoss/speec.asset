@@ -38,23 +38,23 @@ MonoBehaviour:
   - image: {fileID: 2800000, guid: 36f25420a38d0ab49ae3ca12d2a6ff70, type: 3}
     speaker: Master Rani
     text: Now, I need to tell you this.
-  - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
+  - image: {fileID: 2800000, guid: bc5a34eca4ef3ac449e35f13e63e37be, type: 3}
     speaker: 
-    text: '[Master Rani tells Captain India about what he discovered recently and
-      the stones.]'
+    text: Captain India, there is a hidden villain group who tries to make use of
+      these stones.
   - image: {fileID: 2800000, guid: ee31464a0b48c4949a201a93fed85b6c, type: 3}
     speaker: Captain India
     text: Is that.. real?
   - image: {fileID: 2800000, guid: 672dd74a51013464784bb8d74ae6fbee, type: 3}
     speaker: Master Rani
-    text: Yes, it is.
+    text: Yes. It seems like Dr. Jyostin is also part of that villain group.
   - image: {fileID: 2800000, guid: 672dd74a51013464784bb8d74ae6fbee, type: 3}
     speaker: Master Rani
-    text: I don't know when the time will come, but it is definitely coming.
+    text: I've only discovered this recently. But we need to find and eliminate them.
   - image: {fileID: 2800000, guid: 672dd74a51013464784bb8d74ae6fbee, type: 3}
     speaker: Master Rani
-    text: We need to prepare for unknown threats.
+    text: Prepare for it, Captain India.
   - image: {fileID: 2800000, guid: 672dd74a51013464784bb8d74ae6fbee, type: 3}
     speaker: Master Rani
     text: Captain India, I will head back to the HQ and let everyone know about this.
-  value: 0100000001000000000000000000000000000000000000000100000001000000000000000000000001000000010000000100000001000000
+  value: 0100000001000000000000000000000000000000000000000100000001000000010000000000000001000000010000000100000001000000

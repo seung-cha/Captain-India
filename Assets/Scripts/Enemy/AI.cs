@@ -11,6 +11,7 @@ public class AI : MonoBehaviour
     public float stopDistance;
     public float chaseHeightLimit;
     public int health;
+    public int maxHealth;
    
    public Delay Dattack;
    public Delay Ddetection;
@@ -68,6 +69,8 @@ public class AI : MonoBehaviour
         scale = Mathf.Abs(transform.localScale.x);
         wallPos = new Vector2[2];
         player = PlayerManager.Manager.GetPlayer();
+        maxHealth = health;
+
         // Left
      
     }

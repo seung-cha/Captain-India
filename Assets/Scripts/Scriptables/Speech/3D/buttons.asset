@@ -25,4 +25,4 @@ MonoBehaviour:
   - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
     speaker: 
     text: '[NOTE: You can enable Infinite Jump and jump over the obstacle.]'
-  value: 000000000000000000000000
+  value: 00000000000000000000000000000000

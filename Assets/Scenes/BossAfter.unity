@@ -1428,7 +1428,7 @@ PlayableDirector:
   m_GameObject: {fileID: 575977762}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 33432114da2a40f4cabeb20bc67211d9, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: eee28fa2d66ea3644b371e257494bda7, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -1490,6 +1490,10 @@ PlayableDirector:
     value: {fileID: 854480742}
   - key: {fileID: -6215351706985637702, guid: 33432114da2a40f4cabeb20bc67211d9, type: 2}
     value: {fileID: 1022666393}
+  - key: {fileID: -9151148613756919449, guid: eee28fa2d66ea3644b371e257494bda7, type: 2}
+    value: {fileID: 703403213}
+  - key: {fileID: 4261046303528739958, guid: eee28fa2d66ea3644b371e257494bda7, type: 2}
+    value: {fileID: 575977767}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &575977764
@@ -1520,7 +1524,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: eee28fa2d66ea3644b371e257494bda7, type: 2}
 --- !u!4 &575977765
 Transform:
   m_ObjectHideFlags: 0
@@ -1809,7 +1813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8635503786981474779, guid: d5e8500a889cd0c46ba46dd47195c495, type: 3}
       propertyPath: sceneNumber
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5e8500a889cd0c46ba46dd47195c495, type: 3}
@@ -2705,7 +2709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 737934289874178324, guid: 3398499832c4b0844ad3a5fc03d074a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.18
+      value: -7.82
       objectReference: {fileID: 0}
     - target: {fileID: 737934289874178324, guid: 3398499832c4b0844ad3a5fc03d074a4, type: 3}
       propertyPath: m_LocalPosition.z

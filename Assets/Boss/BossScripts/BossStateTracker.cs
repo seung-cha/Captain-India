@@ -434,7 +434,7 @@ public class BossStateTracker : MonoBehaviour
         }
         else if(currentBossHealth <= 0)
         {
-            SceneManager.LoadScene(16);
+            SceneManager.LoadScene(14);
         }
     }
 

@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc68a93edda72446b4ef2d668e6cf72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 4
+  sceneNumber: 3
   delay: 2
   toLoadingScreen: 1
   skipable: 1

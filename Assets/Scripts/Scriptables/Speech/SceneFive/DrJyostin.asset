@@ -18,9 +18,6 @@ MonoBehaviour:
     text: I don't see a way to go down in this room.
   - image: {fileID: 2800000, guid: 00e8ecda20f28c647a1b3b58e60f4184, type: 3}
     speaker: Captain India
-    text: I don't see a way to go down in this room.
-  - image: {fileID: 2800000, guid: 00e8ecda20f28c647a1b3b58e60f4184, type: 3}
-    speaker: Captain India
     text: Perhaps, I need to find other way to . . .
   - image: {fileID: 2800000, guid: f6aef8d4c24cc4b42b09e28b836174de, type: 3}
     speaker: ???
@@ -52,4 +49,4 @@ MonoBehaviour:
   - image: {fileID: 2800000, guid: 00e8ecda20f28c647a1b3b58e60f4184, type: 3}
     speaker: Captain India
     text: I need to go, now.
-  value: 000000000000000000000000010000000000000001000000010000000000000001000000010000000100000000000000
+  value: 0000000000000000010000000000000001000000010000000000000001000000010000000100000000000000

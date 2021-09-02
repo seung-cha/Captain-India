@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IB01
       objectReference: {fileID: 0}
+    - target: {fileID: 4439402345327993820, guid: 2a2adcdb08b5474478a132827b6ae868, type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a2adcdb08b5474478a132827b6ae868, type: 3}
 --- !u!1001 &102691938
@@ -234,6 +238,10 @@ PrefabInstance:
     - target: {fileID: 865761483914012650, guid: 2a2adcdb08b5474478a132827b6ae868, type: 3}
       propertyPath: m_Name
       value: IB01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439402345327993820, guid: 2a2adcdb08b5474478a132827b6ae868, type: 3}
+      propertyPath: health
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7236979106213253908, guid: 2a2adcdb08b5474478a132827b6ae868, type: 3}
       propertyPath: m_SortingOrder
@@ -3017,7 +3025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b4c9b322410c640acbc7ba5d75590b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 7
+  sceneNumber: 5
   toLoadingScreen: 1
 --- !u!4 &1468046180
 Transform:
@@ -3333,6 +3341,10 @@ PrefabInstance:
     - target: {fileID: 865761483914012650, guid: 2a2adcdb08b5474478a132827b6ae868, type: 3}
       propertyPath: m_Name
       value: IB01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439402345327993820, guid: 2a2adcdb08b5474478a132827b6ae868, type: 3}
+      propertyPath: health
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7236979106213253908, guid: 2a2adcdb08b5474478a132827b6ae868, type: 3}
       propertyPath: m_SortingOrder
