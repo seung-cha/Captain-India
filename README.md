@@ -3,3 +3,4 @@
 It is now fully developed and no longer be worked on.
 
 # Latest File can be accessed in the 'lostfile' branch
+I honestly think the coding architecture is too bad but who cares it works ¯\_(ツ)_/¯
